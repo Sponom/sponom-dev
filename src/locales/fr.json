@@ -1,0 +1,72 @@
+{
+  "metadata": {
+    "title": "sponom.dev | Des apps qui simplifient votre quotidien",
+    "description": "Extensions de navigateur et applications mobiles concues pour de vraies personnes. Cree par Sponom Dev.",
+    "keywords": ["applications", "extensions de navigateur", "applications mobiles", "sponom", "Sponom Dev"]
+  },
+  "nav": {
+    "about": "A propos",
+    "products": "Produits",
+    "contact": "Contact"
+  },
+  "hero": {
+    "headline1": "Des apps qui simplifient",
+    "headline2": "votre quotidien",
+    "description": "Extensions de navigateur et applications mobiles concues pour de vraies personnes. Simples, utiles et centrees sur ce qui compte pour vous.",
+    "ctaProducts": "Produits",
+    "ctaContact": "Nous Contacter"
+  },
+  "about": {
+    "sectionLabel": "A propos",
+    "name": "Sergei Ponomarev",
+    "role": "Entrepreneur Solo",
+    "paragraphs": [
+      "Je cree des logiciels qui resolvent de vrais problemes pour de vraies personnes. Mes produits sont concus pour etre intuitifs, fiables et genuinement utiles dans votre vie quotidienne.",
+      "Des extensions de navigateur qui vous font gagner du temps aux applications qui vous aident a grandir personnellement, je me concentre sur la creation de choses qui font une difference significative.",
+      "Je crois que les grands logiciels doivent etre accessibles a tous, pas seulement aux experts en technologie. C'est pourquoi je privilegie la simplicite et l'experience utilisateur dans tout ce que je construis."
+    ],
+    "valuesTitle": "Nos Valeurs",
+    "values": [
+      { "title": "Utilisateur d'Abord", "description": "Chaque produit commence par comprendre les besoins reels des utilisateurs" },
+      { "title": "Simplicite", "description": "Design epure et interfaces intuitives pour tous" },
+      { "title": "Qualite", "description": "Concu avec soin et attention aux details" },
+      { "title": "Confidentialite", "description": "Vos donnees vous appartiennent, toujours" }
+    ]
+  },
+  "projects": {
+    "sectionLabel": "Produits",
+    "sectionTitle": "Produits",
+    "items": [
+      {
+        "title": "Screenshot YouTube Maker",
+        "description": "Extension Chrome qui vous permet de capturer des captures d'ecran parfaites de n'importe quelle video YouTube. Sauvegardez des moments et creez des miniatures instantanement.",
+        "tags": ["Extension Chrome", "YouTube", "Captures d'ecran"]
+      },
+      {
+        "title": "Your QR Code Generator",
+        "description": "Creez des codes QR instantanement a partir de n'importe quelle URL ou texte. Simple, rapide et toujours accessible depuis votre navigateur.",
+        "tags": ["Extension Chrome", "Codes QR", "Productivite"]
+      },
+      {
+        "title": "Recapz",
+        "description": "Un endroit calme pour vos journees. Capturez ce que vous ressentez au moment ou cela se produit. Voyez votre journee telle qu'elle etait vraiment, pas comme la memoire la reecrit.",
+        "tags": ["App Mobile", "Reflexion", "Journal"]
+      }
+    ]
+  },
+  "contact": {
+    "sectionLabel": "Contact",
+    "title": "Nous Contacter",
+    "description": "Vous avez des questions sur nos produits ou vous voulez collaborer? Nous serions ravis de vous entendre.",
+    "cta": "Nous Contacter"
+  },
+  "footer": {
+    "copyright": "Sponom Dev. Tous droits reserves."
+  },
+  "notFound": {
+    "code": "404",
+    "title": "Page non trouvee",
+    "description": "La page que vous recherchez n'existe pas ou a ete deplacee.",
+    "backHome": "Retour a l'Accueil"
+  }
+}

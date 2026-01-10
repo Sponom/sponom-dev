@@ -1,0 +1,72 @@
+{
+  "metadata": {
+    "title": "sponom.dev | Apps that simplify your everyday life",
+    "description": "Browser extensions and mobile apps designed for real people. Built by Sponom Dev.",
+    "keywords": ["apps", "browser extensions", "mobile apps", "sponom", "Sponom Dev"]
+  },
+  "nav": {
+    "about": "About",
+    "products": "Products",
+    "contact": "Contact"
+  },
+  "hero": {
+    "headline1": "Apps that simplify",
+    "headline2": "your everyday life",
+    "description": "Browser extensions and mobile apps designed for real people. Simple, useful, and focused on what matters to you.",
+    "ctaProducts": "Products",
+    "ctaContact": "Get in Touch"
+  },
+  "about": {
+    "sectionLabel": "About",
+    "name": "Sergei Ponomarev",
+    "role": "Solo Entrepreneur",
+    "paragraphs": [
+      "I create software that solves real problems for real people. My products are designed to be intuitive, reliable, and genuinely useful in your daily life.",
+      "From browser extensions that save you time to apps that help you grow personally, I focus on building things that make a meaningful difference.",
+      "I believe great software should be accessible to everyone, not just tech experts. That's why I prioritize simplicity and user experience in everything I build."
+    ],
+    "valuesTitle": "Our Values",
+    "values": [
+      { "title": "User-First", "description": "Every product starts with understanding real user needs" },
+      { "title": "Simplicity", "description": "Clean design and intuitive interfaces for everyone" },
+      { "title": "Quality", "description": "Crafted with care and attention to detail" },
+      { "title": "Privacy", "description": "Your data belongs to you, always" }
+    ]
+  },
+  "projects": {
+    "sectionLabel": "Products",
+    "sectionTitle": "Products",
+    "items": [
+      {
+        "title": "Screenshot YouTube Maker",
+        "description": "Chrome extension that lets you capture perfect screenshots from any YouTube video. Save moments and create thumbnails instantly.",
+        "tags": ["Chrome Extension", "YouTube", "Screenshots"]
+      },
+      {
+        "title": "Your QR Code Generator",
+        "description": "Create QR codes instantly from any URL or text. Simple, fast, and always accessible right from your browser.",
+        "tags": ["Chrome Extension", "QR Codes", "Productivity"]
+      },
+      {
+        "title": "Recapz",
+        "description": "A quiet place for your days. Capture how you feel as it happens. See your day as it really was, not as memory rewrites it.",
+        "tags": ["Mobile App", "Reflection", "Journaling"]
+      }
+    ]
+  },
+  "contact": {
+    "sectionLabel": "Contact",
+    "title": "Get in Touch",
+    "description": "Have questions about our products or want to collaborate? We'd love to hear from you.",
+    "cta": "Contact Us"
+  },
+  "footer": {
+    "copyright": "Sponom Dev. All rights reserved."
+  },
+  "notFound": {
+    "code": "404",
+    "title": "Page not found",
+    "description": "The page you're looking for doesn't exist or has been moved.",
+    "backHome": "Back to Home"
+  }
+}

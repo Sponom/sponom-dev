@@ -1,0 +1,72 @@
+{
+  "metadata": {
+    "title": "sponom.dev | Apps, die Ihren Alltag vereinfachen",
+    "description": "Browser-Erweiterungen und mobile Apps fur echte Menschen entwickelt. Erstellt von Sponom Dev.",
+    "keywords": ["Apps", "Browser-Erweiterungen", "mobile Apps", "sponom", "Sponom Dev"]
+  },
+  "nav": {
+    "about": "Uber uns",
+    "products": "Produkte",
+    "contact": "Kontakt"
+  },
+  "hero": {
+    "headline1": "Apps, die",
+    "headline2": "Ihren Alltag vereinfachen",
+    "description": "Browser-Erweiterungen und mobile Apps fur echte Menschen entwickelt. Einfach, nutzlich und auf das Wesentliche fokussiert.",
+    "ctaProducts": "Produkte",
+    "ctaContact": "Kontakt aufnehmen"
+  },
+  "about": {
+    "sectionLabel": "Uber uns",
+    "name": "Sergei Ponomarev",
+    "role": "Solo-Unternehmer",
+    "paragraphs": [
+      "Ich entwickle Software, die echte Probleme fur echte Menschen lost. Meine Produkte sind darauf ausgelegt, intuitiv, zuverlassig und wirklich nutzlich in Ihrem taglichen Leben zu sein.",
+      "Von Browser-Erweiterungen, die Ihnen Zeit sparen, bis hin zu Apps, die Ihnen helfen, personlich zu wachsen - ich konzentriere mich darauf, Dinge zu bauen, die einen bedeutenden Unterschied machen.",
+      "Ich glaube, dass grossartige Software fur jeden zuganglich sein sollte, nicht nur fur Technik-Experten. Deshalb priorisiere ich Einfachheit und Benutzererfahrung in allem, was ich baue."
+    ],
+    "valuesTitle": "Unsere Werte",
+    "values": [
+      { "title": "Benutzer zuerst", "description": "Jedes Produkt beginnt mit dem Verstandnis echter Benutzerbedurfnisse" },
+      { "title": "Einfachheit", "description": "Klares Design und intuitive Oberflachen fur alle" },
+      { "title": "Qualitat", "description": "Mit Sorgfalt und Liebe zum Detail gefertigt" },
+      { "title": "Datenschutz", "description": "Ihre Daten gehoren Ihnen, immer" }
+    ]
+  },
+  "projects": {
+    "sectionLabel": "Produkte",
+    "sectionTitle": "Produkte",
+    "items": [
+      {
+        "title": "Screenshot YouTube Maker",
+        "description": "Chrome-Erweiterung, mit der Sie perfekte Screenshots von jedem YouTube-Video aufnehmen konnen. Speichern Sie Momente und erstellen Sie sofort Miniaturansichten.",
+        "tags": ["Chrome-Erweiterung", "YouTube", "Screenshots"]
+      },
+      {
+        "title": "Your QR Code Generator",
+        "description": "Erstellen Sie sofort QR-Codes aus jeder URL oder Text. Einfach, schnell und immer direkt in Ihrem Browser zuganglich.",
+        "tags": ["Chrome-Erweiterung", "QR-Codes", "Produktivitat"]
+      },
+      {
+        "title": "Recapz",
+        "description": "Ein ruhiger Ort fur Ihre Tage. Erfassen Sie, wie Sie sich fuhlen, wahrend es passiert. Sehen Sie Ihren Tag so, wie er wirklich war, nicht wie die Erinnerung ihn umschreibt.",
+        "tags": ["Mobile App", "Reflexion", "Tagebuch"]
+      }
+    ]
+  },
+  "contact": {
+    "sectionLabel": "Kontakt",
+    "title": "Kontakt aufnehmen",
+    "description": "Haben Sie Fragen zu unseren Produkten oder mochten Sie zusammenarbeiten? Wir wurden uns freuen, von Ihnen zu horen.",
+    "cta": "Kontaktieren Sie uns"
+  },
+  "footer": {
+    "copyright": "Sponom Dev. Alle Rechte vorbehalten."
+  },
+  "notFound": {
+    "code": "404",
+    "title": "Seite nicht gefunden",
+    "description": "Die gesuchte Seite existiert nicht oder wurde verschoben.",
+    "backHome": "Zuruck zur Startseite"
+  }
+}

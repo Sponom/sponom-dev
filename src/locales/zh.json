@@ -1,0 +1,72 @@
+{
+  "metadata": {
+    "title": "sponom.dev | 简化日常生活的应用",
+    "description": "为真实用户设计的浏览器扩展和移动应用。由 Sponom Dev 打造。",
+    "keywords": ["应用", "浏览器扩展", "移动应用", "sponom", "Sponom Dev"]
+  },
+  "nav": {
+    "about": "关于",
+    "products": "产品",
+    "contact": "联系"
+  },
+  "hero": {
+    "headline1": "简化您",
+    "headline2": "日常生活的应用",
+    "description": "为真实用户设计的浏览器扩展和移动应用。简单、实用，专注于您真正需要的。",
+    "ctaProducts": "产品",
+    "ctaContact": "联系我们"
+  },
+  "about": {
+    "sectionLabel": "关于",
+    "name": "Sergei Ponomarev",
+    "role": "独立创业者",
+    "paragraphs": [
+      "我创建能为真实用户解决实际问题的软件。我的产品设计直观、可靠，在您的日常生活中真正有用。",
+      "从节省时间的浏览器扩展到帮助个人成长的应用，我专注于创造真正有意义的产品。",
+      "我相信优秀的软件应该让每个人都能使用，而不仅仅是技术专家。这就是为什么我在所有产品中都优先考虑简洁性和用户体验。"
+    ],
+    "valuesTitle": "我们的价值观",
+    "values": [
+      { "title": "用户至上", "description": "每个产品都从理解真实用户需求开始" },
+      { "title": "简洁", "description": "为所有人提供简洁的设计和直观的界面" },
+      { "title": "品质", "description": "精心打造，注重细节" },
+      { "title": "隐私", "description": "您的数据永远属于您" }
+    ]
+  },
+  "projects": {
+    "sectionLabel": "产品",
+    "sectionTitle": "产品",
+    "items": [
+      {
+        "title": "Screenshot YouTube Maker",
+        "description": "Chrome 扩展程序，可让您从任何 YouTube 视频中捕获完美的截图。即时保存精彩瞬间并创建缩略图。",
+        "tags": ["Chrome 扩展", "YouTube", "截图"]
+      },
+      {
+        "title": "Your QR Code Generator",
+        "description": "从任何 URL 或文本即时创建二维码。简单、快速，随时可从浏览器访问。",
+        "tags": ["Chrome 扩展", "二维码", "效率"]
+      },
+      {
+        "title": "Recapz",
+        "description": "为您的每一天提供一个安静的空间。记录当下的感受。看到真实的一天，而不是记忆改写后的样子。",
+        "tags": ["移动应用", "反思", "日记"]
+      }
+    ]
+  },
+  "contact": {
+    "sectionLabel": "联系",
+    "title": "联系我们",
+    "description": "对我们的产品有疑问或想要合作？我们很乐意听取您的意见。",
+    "cta": "联系我们"
+  },
+  "footer": {
+    "copyright": "Sponom Dev. 保留所有权利。"
+  },
+  "notFound": {
+    "code": "404",
+    "title": "页面未找到",
+    "description": "您要查找的页面不存在或已被移动。",
+    "backHome": "返回首页"
+  }
+}

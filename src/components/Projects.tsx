@@ -1,54 +1,47 @@
-import Image from 'next/image';
+import Image from "next/image";
+import type { Translation } from "@/lib/i18n/types";
 
-const projects = [
+const projectLinks = [
   {
-    title: 'Screenshot YouTube Maker',
-    description:
-      'Chrome extension that lets you capture perfect screenshots from any YouTube video. Save moments and create thumbnails instantly.',
-    tags: ['Chrome Extension', 'YouTube', 'Screenshots'],
-    link: 'https://chromewebstore.google.com/detail/screenshot-youtube-maker/nipmbloenddjdljjalhmcbaefpmfkgad',
-    logo: '/yt-screenshot-logo.png',
+    link: "https://chromewebstore.google.com/detail/screenshot-youtube-maker/nipmbloenddjdljjalhmcbaefpmfkgad",
+    logo: "/yt-screenshot-logo.png",
   },
   {
-    title: 'Your QR Code Generator',
-    description:
-      'Create QR codes instantly from any URL or text. Simple, fast, and always accessible right from your browser.',
-    tags: ['Chrome Extension', 'QR Codes', 'Productivity'],
-    link: 'https://chromewebstore.google.com/detail/your-qr-code-generator/ampkcjdaobkjgigighjomgfcmomhgpnk',
-    logo: '/qr-logo.png',
+    link: "https://chromewebstore.google.com/detail/your-qr-code-generator/ampkcjdaobkjgigighjomgfcmomhgpnk",
+    logo: "/qr-logo.png",
   },
   {
-    title: 'Recapz',
-    description:
-      'A quiet place for your days. Capture how you feel as it happens. See your day as it really was, not as memory rewrites it.',
-    tags: ['Web', 'Reflection', 'Journaling'],
-    link: 'https://recapz.app/',
-    logo: '/recapz-logo.png',
+    link: "https://recapz.app/",
+    logo: "/recapz-logo.png",
   },
 ];
 
-export default function Projects() {
+interface ProjectsProps {
+  translations: Translation;
+}
+
+export default function Projects({ translations: t }: ProjectsProps) {
   return (
     <section id="projects" className="py-24 px-6 bg-foreground/[0.02]">
       <div className="max-w-5xl mx-auto">
         <div className="text-center mb-16">
           <span className="text-accent text-sm font-medium tracking-wide uppercase mb-4 block">
-            Products
+            {t.projects.sectionLabel}
           </span>
           <h2 className="text-3xl sm:text-4xl font-bold tracking-tight">
-            Products
+            {t.projects.sectionTitle}
           </h2>
         </div>
 
         <div className="grid md:grid-cols-2 gap-6 [&>*:last-child:nth-child(odd)]:md:col-span-2 [&>*:last-child:nth-child(odd)]:md:max-w-[calc(50%-12px)] [&>*:last-child:nth-child(odd)]:md:mx-auto">
-          {projects.map((project, index) => (
+          {t.projects.items.map((project, index) => (
             <article
               key={index}
               className="group bg-background border border-border rounded-2xl p-6 hover:border-accent/30 transition-all duration-300 flex flex-col h-full"
             >
               <div className="flex items-start gap-4 mb-4">
                 <Image
-                  src={project.logo}
+                  src={projectLinks[index].logo}
                   alt={`${project.title} logo`}
                   width={48}
                   height={48}
@@ -60,7 +53,7 @@ export default function Projects() {
                   </h3>
                 </div>
                 <a
-                  href={project.link}
+                  href={projectLinks[index].link}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-2 -m-2 text-muted hover:text-foreground transition-colors"

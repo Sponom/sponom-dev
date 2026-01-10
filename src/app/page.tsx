@@ -1,21 +1,6 @@
-import Header from "@/components/Header";
-import Hero from "@/components/Hero";
-import About from "@/components/About";
-import Projects from "@/components/Projects";
-import Contact from "@/components/Contact";
-import Footer from "@/components/Footer";
+import { redirect } from "next/navigation";
+import { defaultLocale } from "@/lib/i18n/config";
 
-export default function Home() {
-  return (
-    <>
-      <Header />
-      <main>
-        <Hero />
-        <About />
-        <Projects />
-        <Contact />
-      </main>
-      <Footer />
-    </>
-  );
+export default function RootPage() {
+  redirect(`/${defaultLocale}`);
 }

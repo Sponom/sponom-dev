@@ -2,39 +2,50 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import type { Locale } from "@/lib/i18n/config";
+import type { Translation } from "@/lib/i18n/types";
+import LanguageSwitcher from "./LanguageSwitcher";
 
-const navLinks = [
-  { href: "#about", label: "About" },
-  { href: "#projects", label: "Products" },
-  { href: "#contact", label: "Contact" },
-];
+interface HeaderProps {
+  lang: Locale;
+  translations: Translation;
+}
 
-export default function Header() {
+export default function Header({ lang, translations: t }: HeaderProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const navLinks = [
+    { href: "#about", label: t.nav.about },
+    { href: "#projects", label: t.nav.products },
+    { href: "#contact", label: t.nav.contact },
+  ];
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
       <nav className="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
         <Link
-          href="/"
+          href={`/${lang}`}
           className="text-xl font-semibold tracking-tight hover:opacity-80 transition-opacity"
         >
           sponom<span className="text-accent">.</span>dev
         </Link>
 
         {/* Desktop Navigation */}
-        <ul className="hidden md:flex items-center gap-8">
-          {navLinks.map((link) => (
-            <li key={link.href}>
-              <a
-                href={link.href}
-                className="text-muted hover:text-foreground transition-colors text-sm font-medium"
-              >
-                {link.label}
-              </a>
-            </li>
-          ))}
-        </ul>
+        <div className="hidden md:flex items-center gap-8">
+          <ul className="flex items-center gap-8">
+            {navLinks.map((link) => (
+              <li key={link.href}>
+                <a
+                  href={link.href}
+                  className="text-muted hover:text-foreground transition-colors text-sm font-medium"
+                >
+                  {link.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+          <LanguageSwitcher currentLang={lang} />
+        </div>
 
         {/* Mobile Menu Button */}
         <button
@@ -83,6 +94,9 @@ export default function Header() {
               </li>
             ))}
           </ul>
+          <div className="px-6 pb-4">
+            <LanguageSwitcher currentLang={lang} />
+          </div>
         </div>
       )}
     </header>

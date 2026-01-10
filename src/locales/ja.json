@@ -1,0 +1,72 @@
+{
+  "metadata": {
+    "title": "sponom.dev | 日常を簡単にするアプリ",
+    "description": "本当の人々のために設計されたブラウザ拡張機能とモバイルアプリ。Sponom Dev が作成。",
+    "keywords": ["アプリ", "ブラウザ拡張機能", "モバイルアプリ", "sponom", "Sponom Dev"]
+  },
+  "nav": {
+    "about": "概要",
+    "products": "製品",
+    "contact": "お問い合わせ"
+  },
+  "hero": {
+    "headline1": "日常を簡単にする",
+    "headline2": "アプリケーション",
+    "description": "本当の人々のために設計されたブラウザ拡張機能とモバイルアプリ。シンプルで便利、あなたにとって大切なことに集中。",
+    "ctaProducts": "製品",
+    "ctaContact": "お問い合わせ"
+  },
+  "about": {
+    "sectionLabel": "概要",
+    "name": "Sergei Ponomarev",
+    "role": "個人起業家",
+    "paragraphs": [
+      "私は本当の人々のために本当の問題を解決するソフトウェアを作成しています。私の製品は直感的で信頼性が高く、日常生活で本当に役立つように設計されています。",
+      "時間を節約するブラウザ拡張機能から、個人的な成長を助けるアプリまで、意味のある違いを生み出すものを作ることに集中しています。",
+      "優れたソフトウェアは技術の専門家だけでなく、誰でもアクセスできるべきだと信じています。だからこそ、すべての製品でシンプルさとユーザーエクスペリエンスを優先しています。"
+    ],
+    "valuesTitle": "私たちの価値観",
+    "values": [
+      { "title": "ユーザーファースト", "description": "すべての製品は本当のユーザーニーズを理解することから始まります" },
+      { "title": "シンプルさ", "description": "すべての人のためのクリーンなデザインと直感的なインターフェース" },
+      { "title": "品質", "description": "細部まで丁寧に作り込まれています" },
+      { "title": "プライバシー", "description": "あなたのデータは常にあなたのものです" }
+    ]
+  },
+  "projects": {
+    "sectionLabel": "製品",
+    "sectionTitle": "製品",
+    "items": [
+      {
+        "title": "Screenshot YouTube Maker",
+        "description": "あらゆるYouTube動画から完璧なスクリーンショットをキャプチャできるChrome拡張機能。瞬間を保存し、サムネイルを即座に作成。",
+        "tags": ["Chrome拡張機能", "YouTube", "スクリーンショット"]
+      },
+      {
+        "title": "Your QR Code Generator",
+        "description": "あらゆるURLやテキストから即座にQRコードを作成。シンプル、高速、ブラウザからいつでもアクセス可能。",
+        "tags": ["Chrome拡張機能", "QRコード", "生産性"]
+      },
+      {
+        "title": "Recapz",
+        "description": "あなたの日々のための静かな場所。感じたことをその瞬間に記録。記憶が書き換えるのではなく、本当の一日を見つめましょう。",
+        "tags": ["モバイルアプリ", "振り返り", "日記"]
+      }
+    ]
+  },
+  "contact": {
+    "sectionLabel": "お問い合わせ",
+    "title": "お問い合わせ",
+    "description": "製品についてのご質問やコラボレーションをご希望ですか？ぜひお聞かせください。",
+    "cta": "お問い合わせ"
+  },
+  "footer": {
+    "copyright": "Sponom Dev. 全著作権所有。"
+  },
+  "notFound": {
+    "code": "404",
+    "title": "ページが見つかりません",
+    "description": "お探しのページは存在しないか、移動されました。",
+    "backHome": "ホームに戻る"
+  }
+}

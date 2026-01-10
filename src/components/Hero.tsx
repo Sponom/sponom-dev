@@ -1,4 +1,10 @@
-export default function Hero() {
+import type { Translation } from "@/lib/i18n/types";
+
+interface HeroProps {
+  translations: Translation;
+}
+
+export default function Hero({ translations: t }: HeroProps) {
   return (
     <section className="min-h-screen flex items-center justify-center px-6 pt-20 relative overflow-hidden">
       {/* Background Elements */}
@@ -27,21 +33,20 @@ export default function Hero() {
           className="absolute inset-0 opacity-[0.03]"
           style={{
             backgroundImage: `linear-gradient(to right, currentColor 1px, transparent 1px), linear-gradient(to bottom, currentColor 1px, transparent 1px)`,
-            backgroundSize: '60px 60px',
+            backgroundSize: "60px 60px",
           }}
         />
       </div>
 
       <div className="max-w-3xl mx-auto text-center relative">
         <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight mb-6 leading-tight">
-          Apps that simplify
+          {t.hero.headline1}
           <br />
-          your <span className="text-accent">everyday life</span>
+          <span className="text-accent">{t.hero.headline2}</span>
         </h1>
 
         <p className="text-lg sm:text-xl text-muted max-w-2xl mx-auto mb-10 leading-relaxed">
-          Browser extensions and web apps designed for real people.
-          Simple, useful, and focused on what matters to you.
+          {t.hero.description}
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -49,13 +54,13 @@ export default function Hero() {
             href="#projects"
             className="w-full sm:w-auto px-8 py-3 bg-accent text-white font-medium rounded-full hover:bg-accent-light transition-colors"
           >
-            Products
+            {t.hero.ctaProducts}
           </a>
           <a
             href="#contact"
             className="w-full sm:w-auto px-8 py-3 border border-border font-medium rounded-full hover:bg-foreground/5 transition-colors"
           >
-            Get in Touch
+            {t.hero.ctaContact}
           </a>
         </div>
 
