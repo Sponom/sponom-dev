@@ -2,6 +2,7 @@
 
 import { useEffect, useRef } from "react";
 import type { Translation } from "@/lib/i18n/types";
+import { submitInterest } from "@/lib/decider-interest";
 import "./decider-phone.css";
 
 type Prototype = Translation["decider"]["prototype"];
@@ -530,6 +531,7 @@ export default function DeciderPhone({ name, prototype }: DeciderPhoneProps) {
       view.querySelector<HTMLElement>("#notify")!.addEventListener("click", function () {
         buzz([0, 30, 40, 90]); SFX.win();
         const email = ((view.querySelector<HTMLInputElement>("#email")!.value) || "").trim();
+        submitInterest(email);
         const cta = view.querySelector<HTMLElement>("#cta")!;
         const title = email ? cm.doneWithEmailTitle : cm.doneNoEmailTitle;
         const sub = email ? cm.doneWithEmailSub : cm.doneNoEmailSub;

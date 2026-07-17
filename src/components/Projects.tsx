@@ -97,7 +97,7 @@ export default function Projects({ lang, translations: t }: ProjectsProps) {
               'aria-label': `View ${project.title}`,
             };
 
-            if (meta.internal) {
+            if (!meta.internal) {
               linkProps.target = '_blank';
               linkProps.rel = 'noopener noreferrer';
             }
