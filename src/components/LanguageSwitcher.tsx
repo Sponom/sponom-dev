@@ -2,6 +2,7 @@
 
 import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { locales, localeNames, localeFlags, type Locale } from "@/lib/i18n/config";
 
 interface LanguageSwitcherProps {
@@ -11,6 +12,19 @@ interface LanguageSwitcherProps {
 export default function LanguageSwitcher({ currentLang }: LanguageSwitcherProps) {
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
+  const pathname = usePathname();
+
+  // Swap only the leading locale segment so the current page (e.g. /decider) is
+  // preserved when the language changes. Falls back to the locale root.
+  function localizedHref(locale: Locale) {
+    const segments = (pathname ?? `/${currentLang}`).split("/");
+    // segments[0] is "" (leading slash); segments[1] is the current locale.
+    if (segments[1] && (locales as readonly string[]).includes(segments[1])) {
+      segments[1] = locale;
+      return segments.join("/") || `/${locale}`;
+    }
+    return `/${locale}`;
+  }
 
   useEffect(() => {
     function handleClickOutside(event: MouseEvent) {
@@ -52,7 +66,7 @@ export default function LanguageSwitcher({ currentLang }: LanguageSwitcherProps)
           {locales.map((locale) => (
             <Link
               key={locale}
-              href={`/${locale}`}
+              href={localizedHref(locale)}
               onClick={() => setIsOpen(false)}
               className={`flex items-center gap-2 px-4 py-2 text-sm transition-colors ${
                 locale === currentLang

@@ -2,7 +2,13 @@
   "metadata": {
     "title": "sponom.dev | 简化日常生活的应用",
     "description": "为真实用户设计的浏览器扩展和移动应用。由 Sponom Dev 打造。",
-    "keywords": ["应用", "浏览器扩展", "移动应用", "sponom", "Sponom Dev"]
+    "keywords": [
+      "应用",
+      "浏览器扩展",
+      "移动应用",
+      "sponom",
+      "Sponom Dev"
+    ]
   },
   "nav": {
     "about": "关于",
@@ -27,10 +33,22 @@
     ],
     "valuesTitle": "我们的价值观",
     "values": [
-      { "title": "用户至上", "description": "每个产品都从理解真实用户需求开始" },
-      { "title": "简洁", "description": "为所有人提供简洁的设计和直观的界面" },
-      { "title": "品质", "description": "精心打造，注重细节" },
-      { "title": "隐私", "description": "您的数据永远属于您" }
+      {
+        "title": "用户至上",
+        "description": "每个产品都从理解真实用户需求开始"
+      },
+      {
+        "title": "简洁",
+        "description": "为所有人提供简洁的设计和直观的界面"
+      },
+      {
+        "title": "品质",
+        "description": "精心打造，注重细节"
+      },
+      {
+        "title": "隐私",
+        "description": "您的数据永远属于您"
+      }
     ]
   },
   "projects": {
@@ -40,17 +58,38 @@
       {
         "title": "Screenshot YouTube Maker",
         "description": "Chrome 扩展程序，可让您从任何 YouTube 视频中捕获完美的截图。即时保存精彩瞬间并创建缩略图。",
-        "tags": ["Chrome 扩展", "YouTube", "截图"]
+        "tags": [
+          "Chrome 扩展",
+          "YouTube",
+          "截图"
+        ]
       },
       {
         "title": "Your QR Code Generator",
         "description": "从任何 URL 或文本即时创建二维码。简单、快速，随时可从浏览器访问。",
-        "tags": ["Chrome 扩展", "二维码", "效率"]
+        "tags": [
+          "Chrome 扩展",
+          "二维码",
+          "效率"
+        ]
       },
       {
         "title": "Recapz",
         "description": "为您的每一天提供一个安静的空间。记录当下的感受。看到真实的一天，而不是记忆改写后的样子。",
-        "tags": ["移动应用", "反思", "日记"]
+        "tags": [
+          "移动应用",
+          "反思",
+          "日记"
+        ]
+      },
+      {
+        "title": "The Decider",
+        "description": "A digital circuit-breaker for thought loops. Turn hard choices into fast, tactile micro-games — no AI, no tracking. Try the interactive prototype.",
+        "tags": [
+          "Mobile App",
+          "Decision-making",
+          "Prototype"
+        ]
       }
     ]
   },
@@ -62,6 +101,159 @@
   },
   "footer": {
     "copyright": "Sponom Dev. 保留所有权利。"
+  },
+  "decider": {
+    "comingSoonLabel": "即将推出",
+    "name": "The Decider",
+    "tagline": "专治思绪打转的数字断路器。把纠结的选择变成快速、有手感的小游戏——无 AI，无追踪。",
+    "cta": "试用原型",
+    "metaTitle": "The Decider — 原型 | sponom.dev",
+    "introLabel": "原型",
+    "introTitle": "亲自试试。",
+    "introDescription": "The Decider 的互动预览，就在你的浏览器里运行。选一件让你纠结的事，让它的决策引擎替你拍板。移动端即将推出。",
+    "backHome": "返回首页",
+    "prototype": {
+      "buckets": {
+        "eat": {
+          "emoji": "🍔",
+          "eyebrow": "今晚",
+          "title": "吃什么",
+          "desc": "别再对着冰箱发呆",
+          "pool": [
+            "寿司",
+            "塔可",
+            "披萨",
+            "手打汉堡",
+            "拉面",
+            "泰式炒河粉",
+            "夏威夷生鱼饭",
+            "沙威玛",
+            "饺子",
+            "手工意面",
+            "韩式烤肉",
+            "水牛城辣鸡翅"
+          ]
+        },
+        "go": {
+          "emoji": "🌍",
+          "eyebrow": "去",
+          "title": "去哪里",
+          "desc": "结束「你来定」的僵局",
+          "pool": [
+            "咖啡馆",
+            "公园",
+            "电影院",
+            "购物中心",
+            "健身房",
+            "附近的酒吧",
+            "海边",
+            "保龄球馆",
+            "朋友家",
+            "农夫市集",
+            "小餐馆",
+            "游泳池"
+          ]
+        },
+        "do": {
+          "emoji": "🎬",
+          "eyebrow": "去做",
+          "title": "做什么",
+          "desc": "拯救被浪费的夜晚",
+          "pool": [
+            "读一章书",
+            "玩个游戏",
+            "去跑步",
+            "彻底大扫除",
+            "画点东西",
+            "给朋友打电话",
+            "做套瑜伽",
+            "试做新菜",
+            "写一页日记",
+            "看部纪录片",
+            "学一首歌",
+            "小睡一会儿"
+          ]
+        }
+      },
+      "enter": {
+        "title": "做决定，<br>不费劲。",
+        "sub": "轻快又过瘾的小助推，帮你把心底的答案拽出来。",
+        "cta": "打破循环",
+        "foot": "无菜单 · 无 AI · 完全离线"
+      },
+      "hub": {
+        "title": "别再<br>想太多。",
+        "sub": "点一下让你纠结的事——几秒钟我帮你拍板。"
+      },
+      "back": "‹ 返回",
+      "gut": {
+        "spin": "转一下",
+        "countdownLabel": "静下来感受……犹豫了？点「不行」",
+        "redo": "↺ 不行——不是这个"
+      },
+      "bracket": {
+        "final": "胜者留下",
+        "round": "选哪个？· 还剩 {count} 个",
+        "vs": "vs"
+      },
+      "blind": {
+        "hint": "点一张卡片来<b>排除它</b>——最后剩下的就是你的答案",
+        "finalHint": "只剩一个——这就是你的答案。<b>锁定它</b>，如果你偷偷惦记下面某个，也可以选它。",
+        "cardBack": "?",
+        "out": "出局",
+        "ruledOut": "已排除",
+        "ruledOutSwitchHint": "已排除 · 点一个可切换到它",
+        "ruledOutMissHint": "已排除 · 舍不得某个？点它——那就是你的答案",
+        "emptyYet": "还没排除任何一个",
+        "empty": "没有排除任何一个",
+        "lockIn": "锁定它"
+      },
+      "weighted": {
+        "left": "还剩 {count} 可分配",
+        "roll": "开始摇",
+        "inPlay": " · {count} 参与中"
+      },
+      "result": {
+        "note": "就是它了。别回头——出发吧。",
+        "again": "再来一次",
+        "want": "我会用这个应用"
+      },
+      "coming": {
+        "eyebrow": "你加入了",
+        "title": "接下来<br>会有什么",
+        "sub": "The Decider 还计划推出更多功能",
+        "features": [
+          {
+            "icon": "🤝",
+            "name": "对战模式",
+            "desc": "一起做决定——两部手机，一次点击。"
+          },
+          {
+            "icon": "⭐",
+            "name": "你的专属清单",
+            "desc": "收藏你的常选项。"
+          },
+          {
+            "icon": "🎞️",
+            "name": "主题清单",
+            "desc": "现成的合集——约会之夜、治愈美食、慵懒周日。"
+          },
+          {
+            "icon": "📍",
+            "name": "附近地点",
+            "desc": "随你所在位置更新的清单。"
+          }
+        ],
+        "ctaTitle": "想收到通知吗？",
+        "ctaSub": "留下邮箱，上线时我会通知你。选填。",
+        "emailPlaceholder": "邮箱（选填）",
+        "notify": "算我一个",
+        "doneWithEmailTitle": "你已加入名单——谢谢。",
+        "doneWithEmailSub": "一上线我就立刻通知你。",
+        "doneNoEmailTitle": "谢谢——你的一票很重要。",
+        "doneNoEmailSub": "无需邮箱——你的关注就是帮我决定接下来做什么的信号。"
+      }
+    }
   },
   "notFound": {
     "code": "404",

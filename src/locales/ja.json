@@ -2,7 +2,13 @@
   "metadata": {
     "title": "sponom.dev | 日常を簡単にするアプリ",
     "description": "本当の人々のために設計されたブラウザ拡張機能とモバイルアプリ。Sponom Dev が作成。",
-    "keywords": ["アプリ", "ブラウザ拡張機能", "モバイルアプリ", "sponom", "Sponom Dev"]
+    "keywords": [
+      "アプリ",
+      "ブラウザ拡張機能",
+      "モバイルアプリ",
+      "sponom",
+      "Sponom Dev"
+    ]
   },
   "nav": {
     "about": "概要",
@@ -27,10 +33,22 @@
     ],
     "valuesTitle": "私たちの価値観",
     "values": [
-      { "title": "ユーザーファースト", "description": "すべての製品は本当のユーザーニーズを理解することから始まります" },
-      { "title": "シンプルさ", "description": "すべての人のためのクリーンなデザインと直感的なインターフェース" },
-      { "title": "品質", "description": "細部まで丁寧に作り込まれています" },
-      { "title": "プライバシー", "description": "あなたのデータは常にあなたのものです" }
+      {
+        "title": "ユーザーファースト",
+        "description": "すべての製品は本当のユーザーニーズを理解することから始まります"
+      },
+      {
+        "title": "シンプルさ",
+        "description": "すべての人のためのクリーンなデザインと直感的なインターフェース"
+      },
+      {
+        "title": "品質",
+        "description": "細部まで丁寧に作り込まれています"
+      },
+      {
+        "title": "プライバシー",
+        "description": "あなたのデータは常にあなたのものです"
+      }
     ]
   },
   "projects": {
@@ -40,17 +58,38 @@
       {
         "title": "Screenshot YouTube Maker",
         "description": "あらゆるYouTube動画から完璧なスクリーンショットをキャプチャできるChrome拡張機能。瞬間を保存し、サムネイルを即座に作成。",
-        "tags": ["Chrome拡張機能", "YouTube", "スクリーンショット"]
+        "tags": [
+          "Chrome拡張機能",
+          "YouTube",
+          "スクリーンショット"
+        ]
       },
       {
         "title": "Your QR Code Generator",
         "description": "あらゆるURLやテキストから即座にQRコードを作成。シンプル、高速、ブラウザからいつでもアクセス可能。",
-        "tags": ["Chrome拡張機能", "QRコード", "生産性"]
+        "tags": [
+          "Chrome拡張機能",
+          "QRコード",
+          "生産性"
+        ]
       },
       {
         "title": "Recapz",
         "description": "あなたの日々のための静かな場所。感じたことをその瞬間に記録。記憶が書き換えるのではなく、本当の一日を見つめましょう。",
-        "tags": ["モバイルアプリ", "振り返り", "日記"]
+        "tags": [
+          "モバイルアプリ",
+          "振り返り",
+          "日記"
+        ]
+      },
+      {
+        "title": "The Decider",
+        "description": "A digital circuit-breaker for thought loops. Turn hard choices into fast, tactile micro-games — no AI, no tracking. Try the interactive prototype.",
+        "tags": [
+          "Mobile App",
+          "Decision-making",
+          "Prototype"
+        ]
       }
     ]
   },
@@ -62,6 +101,159 @@
   },
   "footer": {
     "copyright": "Sponom Dev. 全著作権所有。"
+  },
+  "decider": {
+    "comingSoonLabel": "近日公開",
+    "name": "The Decider",
+    "tagline": "ぐるぐる思考を断ち切るデジタル・ブレーカー。難しい選択を、サクッと手触りのいいミニゲームに。AIなし、追跡なし。",
+    "cta": "プロトタイプを試す",
+    "metaTitle": "The Decider — プロトタイプ | sponom.dev",
+    "introLabel": "プロトタイプ",
+    "introTitle": "自分で試してみて。",
+    "introDescription": "The Decider のインタラクティブ・プレビューを、この場でブラウザから体験。迷っていることを選んで、決定エンジンに答えを出してもらいましょう。モバイル版も近日公開。",
+    "backHome": "ホームに戻る",
+    "prototype": {
+      "buckets": {
+        "eat": {
+          "emoji": "🍔",
+          "eyebrow": "今夜",
+          "title": "何を食べる",
+          "desc": "冷蔵庫の前で悩むのは終わり",
+          "pool": [
+            "寿司",
+            "タコス",
+            "ピザ",
+            "スマッシュバーガー",
+            "ラーメン",
+            "パッタイ",
+            "ポキボウル",
+            "シャワルマ",
+            "餃子",
+            "生パスタ",
+            "焼肉",
+            "バッファローウィング"
+          ]
+        },
+        "go": {
+          "emoji": "🌍",
+          "eyebrow": "行き先",
+          "title": "どこに行く",
+          "desc": "「どっちでも」の押し付け合いに決着",
+          "pool": [
+            "カフェ",
+            "公園",
+            "映画館",
+            "ショッピングモール",
+            "ジム",
+            "近所のバー",
+            "ビーチ",
+            "ボウリング",
+            "友達の家",
+            "ファーマーズマーケット",
+            "ダイナー",
+            "プール"
+          ]
+        },
+        "do": {
+          "emoji": "🎬",
+          "eyebrow": "やること",
+          "title": "何をする",
+          "desc": "ムダになりそうな夜を救う",
+          "pool": [
+            "本を一章読む",
+            "ゲームをする",
+            "ランニングに行く",
+            "がっつり掃除",
+            "何かスケッチ",
+            "友達に電話",
+            "ヨガの流れ",
+            "新しい料理に挑戦",
+            "日記を一ページ",
+            "ドキュメンタリーを観る",
+            "曲を一つ覚える",
+            "昼寝する"
+          ]
+        }
+      },
+      "enter": {
+        "title": "決めるのが、<br>ラクになる。",
+        "sub": "直感から答えを引き出す、サクッと気持ちいいひと押し。",
+        "cta": "ループを断ち切る",
+        "foot": "メニューなし · AIなし · 完全オフライン"
+      },
+      "hub": {
+        "title": "考えすぎるの、<br>やめよう。",
+        "sub": "迷っていることをタップ。数秒で決めます。"
+      },
+      "back": "‹ 戻る",
+      "gut": {
+        "spin": "回す",
+        "countdownLabel": "ちょっと考えて…ピンとこない？ならノー",
+        "redo": "↺ ノー、それは違う"
+      },
+      "bracket": {
+        "final": "勝者続投",
+        "round": "どっち？ · 残り{count}",
+        "vs": "vs"
+      },
+      "blind": {
+        "hint": "カードをタップして<b>除外</b>。最後に残った一枚があなたの答え",
+        "finalHint": "残りは一つ。これがあなたの答え。<b>確定する</b>か、下でこっそり気になるものがあればそっちを選んでも。",
+        "cardBack": "?",
+        "out": "アウト",
+        "ruledOut": "除外済み",
+        "ruledOutSwitchHint": "除外済み · タップで切り替え",
+        "ruledOutMissHint": "除外済み · 心残りがある？タップすればそれが答え",
+        "emptyYet": "まだ何も除外していません",
+        "empty": "除外なし",
+        "lockIn": "確定する"
+      },
+      "weighted": {
+        "left": "残り{count}ポイント",
+        "roll": "転がしてみる",
+        "inPlay": " · {count}が対象"
+      },
+      "result": {
+        "note": "これで決まり。振り返らず、進もう。",
+        "again": "もう一回",
+        "want": "このアプリ使いたい"
+      },
+      "coming": {
+        "eyebrow": "参加完了",
+        "title": "これからの<br>予定",
+        "sub": "The Decider に予定している機能をいくつか",
+        "features": [
+          {
+            "icon": "🤝",
+            "name": "マッチモード",
+            "desc": "一緒に決める。二台のスマホ、ひとつのタップで。"
+          },
+          {
+            "icon": "⭐",
+            "name": "自分のリスト",
+            "desc": "お気に入りの選択肢を保存。"
+          },
+          {
+            "icon": "🎞️",
+            "name": "テーマ別リスト",
+            "desc": "できあいのパック。デートの夜、癒しの料理、だらだら日曜。"
+          },
+          {
+            "icon": "📍",
+            "name": "近くの場所",
+            "desc": "現在地に合わせて変わるリスト。"
+          }
+        ],
+        "ctaTitle": "お知らせがほしい？",
+        "ctaSub": "メールを残せば公開時にお知らせします。任意です。",
+        "emailPlaceholder": "メール（任意）",
+        "notify": "参加する",
+        "doneWithEmailTitle": "リストに登録しました。ありがとう。",
+        "doneWithEmailSub": "公開したらすぐにお知らせします。",
+        "doneNoEmailTitle": "ありがとう。あなたの一票が力になります。",
+        "doneNoEmailSub": "メールは不要。あなたの関心こそ、次に何を作るかを決める手がかりです。"
+      }
+    }
   },
   "notFound": {
     "code": "404",

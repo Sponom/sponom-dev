@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
+import { notFound } from "next/navigation";
 import { Geist, Geist_Mono } from "next/font/google";
-import { locales, type Locale } from "@/lib/i18n/config";
-import { getTranslation } from "@/lib/i18n/get-translation";
+import { locales } from "@/lib/i18n/config";
+import { getTranslation, isLocale } from "@/lib/i18n/get-translation";
 import "../globals.css";
 
 const geistSans = Geist({
@@ -24,7 +25,7 @@ export async function generateMetadata({
   params: Promise<{ lang: string }>;
 }): Promise<Metadata> {
   const { lang } = await params;
-  const t = getTranslation(lang as Locale);
+  const t = getTranslation(lang);
 
   return {
     title: t.metadata.title,
@@ -65,6 +66,10 @@ export default async function LangLayout({
   params: Promise<{ lang: string }>;
 }) {
   const { lang } = await params;
+
+  if (!isLocale(lang)) {
+    notFound();
+  }
 
   return (
     <html lang={lang}>

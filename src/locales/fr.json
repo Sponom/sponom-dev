@@ -2,7 +2,13 @@
   "metadata": {
     "title": "sponom.dev | Des apps qui simplifient votre quotidien",
     "description": "Extensions de navigateur et applications mobiles concues pour de vraies personnes. Cree par Sponom Dev.",
-    "keywords": ["applications", "extensions de navigateur", "applications mobiles", "sponom", "Sponom Dev"]
+    "keywords": [
+      "applications",
+      "extensions de navigateur",
+      "applications mobiles",
+      "sponom",
+      "Sponom Dev"
+    ]
   },
   "nav": {
     "about": "A propos",
@@ -27,10 +33,22 @@
     ],
     "valuesTitle": "Nos Valeurs",
     "values": [
-      { "title": "Utilisateur d'Abord", "description": "Chaque produit commence par comprendre les besoins reels des utilisateurs" },
-      { "title": "Simplicite", "description": "Design epure et interfaces intuitives pour tous" },
-      { "title": "Qualite", "description": "Concu avec soin et attention aux details" },
-      { "title": "Confidentialite", "description": "Vos donnees vous appartiennent, toujours" }
+      {
+        "title": "Utilisateur d'Abord",
+        "description": "Chaque produit commence par comprendre les besoins reels des utilisateurs"
+      },
+      {
+        "title": "Simplicite",
+        "description": "Design epure et interfaces intuitives pour tous"
+      },
+      {
+        "title": "Qualite",
+        "description": "Concu avec soin et attention aux details"
+      },
+      {
+        "title": "Confidentialite",
+        "description": "Vos donnees vous appartiennent, toujours"
+      }
     ]
   },
   "projects": {
@@ -40,17 +58,38 @@
       {
         "title": "Screenshot YouTube Maker",
         "description": "Extension Chrome qui vous permet de capturer des captures d'ecran parfaites de n'importe quelle video YouTube. Sauvegardez des moments et creez des miniatures instantanement.",
-        "tags": ["Extension Chrome", "YouTube", "Captures d'ecran"]
+        "tags": [
+          "Extension Chrome",
+          "YouTube",
+          "Captures d'ecran"
+        ]
       },
       {
         "title": "Your QR Code Generator",
         "description": "Creez des codes QR instantanement a partir de n'importe quelle URL ou texte. Simple, rapide et toujours accessible depuis votre navigateur.",
-        "tags": ["Extension Chrome", "Codes QR", "Productivite"]
+        "tags": [
+          "Extension Chrome",
+          "Codes QR",
+          "Productivite"
+        ]
       },
       {
         "title": "Recapz",
         "description": "Un endroit calme pour vos journees. Capturez ce que vous ressentez au moment ou cela se produit. Voyez votre journee telle qu'elle etait vraiment, pas comme la memoire la reecrit.",
-        "tags": ["App Mobile", "Reflexion", "Journal"]
+        "tags": [
+          "App Mobile",
+          "Reflexion",
+          "Journal"
+        ]
+      },
+      {
+        "title": "The Decider",
+        "description": "A digital circuit-breaker for thought loops. Turn hard choices into fast, tactile micro-games — no AI, no tracking. Try the interactive prototype.",
+        "tags": [
+          "Mobile App",
+          "Decision-making",
+          "Prototype"
+        ]
       }
     ]
   },
@@ -62,6 +101,159 @@
   },
   "footer": {
     "copyright": "Sponom Dev. Tous droits reserves."
+  },
+  "decider": {
+    "comingSoonLabel": "Bientot disponible",
+    "name": "The Decider",
+    "tagline": "Un disjoncteur numerique pour les pensees en boucle. Transformez les choix difficiles en micro-jeux rapides et tactiles — sans IA, sans pistage.",
+    "cta": "Essayer le prototype",
+    "metaTitle": "The Decider — Prototype | sponom.dev",
+    "introLabel": "Prototype",
+    "introTitle": "Essayez par vous-meme.",
+    "introDescription": "Un apercu interactif de The Decider, directement dans votre navigateur. Choisissez ce qui vous bloque et laissez l'un de ses moteurs de decision trancher pour vous. Bientot sur mobile.",
+    "backHome": "Retour a l'accueil",
+    "prototype": {
+      "buckets": {
+        "eat": {
+          "emoji": "🍔",
+          "eyebrow": "Ce soir",
+          "title": "Quoi manger",
+          "desc": "Fini de fixer le frigo",
+          "pool": [
+            "Sushi",
+            "Tacos",
+            "Pizza",
+            "Smash burger",
+            "Ramen",
+            "Pad thai",
+            "Poke bowl",
+            "Shawarma",
+            "Raviolis",
+            "Pates fraiches",
+            "Barbecue coreen",
+            "Ailes de poulet buffalo"
+          ]
+        },
+        "go": {
+          "emoji": "🌍",
+          "eyebrow": "Aller a",
+          "title": "Ou aller",
+          "desc": "Reglez le duel du 'c'est toi qui choisis'",
+          "pool": [
+            "Un cafe",
+            "Le parc",
+            "Le cinema",
+            "Le centre commercial",
+            "La salle de sport",
+            "Un bar du coin",
+            "La plage",
+            "Le bowling",
+            "Chez un ami",
+            "Le marche",
+            "Un resto",
+            "La piscine"
+          ]
+        },
+        "do": {
+          "emoji": "🎬",
+          "eyebrow": "Passe a l'action",
+          "title": "Quoi faire",
+          "desc": "Sauvez une soiree gachee",
+          "pool": [
+            "Lire un chapitre",
+            "Jouer a un jeu",
+            "Aller courir",
+            "Grand menage",
+            "Dessiner un truc",
+            "Appeler un ami",
+            "Seance de yoga",
+            "Cuisiner du nouveau",
+            "Ecrire une page",
+            "Voir un docu",
+            "Apprendre une chanson",
+            "Faire une sieste"
+          ]
+        }
+      },
+      "enter": {
+        "title": "Decider,<br>tout simplement.",
+        "sub": "Des coups de pouce rapides et satisfaisants qui font remonter la decision de vos tripes.",
+        "cta": "Brisez la boucle",
+        "foot": "pas de menus · pas d'IA · 100% hors ligne"
+      },
+      "hub": {
+        "title": "Arretons de<br>trop reflechir.",
+        "sub": "Touchez ce qui vous bloque — je tranche en quelques secondes."
+      },
+      "back": "‹ retour",
+      "gut": {
+        "spin": "Lancez",
+        "countdownLabel": "Laissez venir… ca coince ? faites non",
+        "redo": "↺ Non — pas ca"
+      },
+      "bracket": {
+        "final": "Le gagnant reste",
+        "round": "Lequel ? · {count} restants",
+        "vs": "vs"
+      },
+      "blind": {
+        "hint": "Touchez une carte pour <b>l'ecarter</b> — la derniere qui reste est votre reponse",
+        "finalHint": "Il en reste une — c'est votre reponse. <b>Validez-la</b>, ou si l'une en dessous vous manque en secret, prenez-la plutot.",
+        "cardBack": "?",
+        "out": "sortie",
+        "ruledOut": "Ecartee",
+        "ruledOutSwitchHint": "Ecartee · touchez-en une pour la choisir",
+        "ruledOutMissHint": "Ecartee · une vous manque ? touchez-la — c'est votre reponse",
+        "emptyYet": "rien d'ecarte pour l'instant",
+        "empty": "rien d'ecarte",
+        "lockIn": "Validez"
+      },
+      "weighted": {
+        "left": "{count} a depenser",
+        "roll": "Lancez le sort",
+        "inPlay": " · {count} en jeu"
+      },
+      "result": {
+        "note": "C'est celui-la. Ne vous retournez pas — foncez.",
+        "again": "On recommence",
+        "want": "J'utiliserais cette app"
+      },
+      "coming": {
+        "eyebrow": "C'est bon",
+        "title": "Ce qui arrive<br>ensuite",
+        "sub": "Encore quelques nouveautes prevues pour The Decider",
+        "features": [
+          {
+            "icon": "🤝",
+            "name": "Mode Duo",
+            "desc": "Decidez ensemble — deux telephones, un seul geste."
+          },
+          {
+            "icon": "⭐",
+            "name": "Vos propres listes",
+            "desc": "Enregistrez vos choix favoris."
+          },
+          {
+            "icon": "🎞️",
+            "name": "Listes a themes",
+            "desc": "Des packs tout prets — soirees en amoureux, plats reconfortants, dimanches paresseux."
+          },
+          {
+            "icon": "📍",
+            "name": "Lieux a proximite",
+            "desc": "Des listes qui suivent votre position."
+          }
+        ],
+        "ctaTitle": "Envie d'etre prevenu ?",
+        "ctaSub": "Laissez votre email et je vous previens des la sortie. Facultatif.",
+        "emailPlaceholder": "Email (facultatif)",
+        "notify": "Je participe",
+        "doneWithEmailTitle": "Vous etes sur la liste — merci.",
+        "doneWithEmailSub": "Je vous ecris des que c'est disponible.",
+        "doneNoEmailTitle": "Merci — votre voix compte.",
+        "doneNoEmailSub": "Pas besoin d'email — votre interet est le signal qui m'aide a decider quoi construire ensuite."
+      }
+    }
   },
   "notFound": {
     "code": "404",

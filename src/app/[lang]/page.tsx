@@ -22,7 +22,7 @@ export default async function Home({
       <main>
         <Hero translations={t} />
         <About translations={t} />
-        <Projects translations={t} />
+        <Projects lang={locale} translations={t} />
         <Contact translations={t} />
       </main>
       <Footer lang={locale} translations={t} />

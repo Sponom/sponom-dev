@@ -1,4 +1,4 @@
-import type { Locale } from "./config";
+import { defaultLocale, locales, type Locale } from "./config";
 import type { Translation } from "./types";
 
 import en from "@/locales/en.json";
@@ -21,6 +21,10 @@ const translations: Record<Locale, Translation> = {
   ru,
 };
 
-export function getTranslation(locale: Locale): Translation {
-  return translations[locale];
+export function isLocale(value: string): value is Locale {
+  return (locales as readonly string[]).includes(value);
+}
+
+export function getTranslation(locale: string): Translation {
+  return translations[isLocale(locale) ? locale : defaultLocale];
 }
