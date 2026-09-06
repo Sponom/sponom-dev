@@ -349,17 +349,17 @@ export default function DeciderLanding({ locale }: { locale: Locale }) {
         </section>
 
         {/* ── See it in action: a rail you scroll, not a grid you scan ─── */}
-        <section className="py-14 sm:py-20 border-t border-dc-hairline">
-          <div className="max-w-6xl mx-auto px-6 mb-12">
+        <section className="max-w-6xl mx-auto px-6 py-14 sm:py-20 border-t border-dc-hairline">
+          <div className="mb-12">
             <p className="dc-eyebrow mb-4">See it in action</p>
-            <h2 className="dc-display text-3xl sm:text-[2.75rem] leading-[1.1] mb-6 max-w-3xl">
+            <h2 className="dc-display text-3xl sm:text-4xl mb-6 max-w-3xl">
               Dinner. The film. The weekend. The thing you keep putting off.
             </h2>
             <p className="dc-lede max-w-lg">
               Whatever you&rsquo;ve been circling, put it in and let it go.
             </p>
           </div>
-          <div className="max-w-6xl mx-auto px-6">
+          <div>
             <div className="flex gap-4 sm:gap-6 overflow-x-auto overscroll-x-contain pt-2 pb-6 scrollbar-thin scrollbar-thumb-dc-glass scrollbar-track-transparent hover:scrollbar-thumb-dc-label-2">
               {SCREENS.map((s) => (
                 // eslint-disable-next-line @next/next/no-img-element
