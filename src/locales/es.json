@@ -83,12 +83,12 @@
         ]
       },
       {
-        "title": "The Decider",
-        "description": "A digital circuit-breaker for thought loops. Turn hard choices into fast, tactile micro-games — no AI, no tracking. Try the interactive prototype.",
+        "title": "Decider",
+        "description": "Toma la pequeña decisión por ti en unos tres segundos: sin IA, sin cuentas y totalmente sin conexión.",
         "tags": [
-          "Mobile App",
-          "Decision-making",
-          "Prototype"
+          "Aplicación móvil",
+          "Decisiones",
+          "iOS"
         ]
       }
     ]
@@ -103,157 +103,7 @@
     "copyright": "Sponom Dev. Todos los derechos reservados."
   },
   "decider": {
-    "comingSoonLabel": "Próximamente",
-    "name": "The Decider",
-    "tagline": "Un cortacircuitos digital para los bucles mentales. Convierte decisiones difíciles en micro-juegos rápidos y táctiles: sin IA, sin rastreo.",
-    "cta": "Prueba el prototipo",
-    "metaTitle": "The Decider — Prototipo | sponom.dev",
-    "introLabel": "Prototipo",
-    "introTitle": "Pruébalo tú mismo.",
-    "introDescription": "Una vista previa interactiva de The Decider, funcionando aquí mismo en tu navegador. Elige algo que te tenga bloqueado y deja que uno de sus motores de decisión lo resuelva por ti. Próximamente en móvil.",
-    "backHome": "Volver al inicio",
-    "prototype": {
-      "buckets": {
-        "eat": {
-          "emoji": "🍔",
-          "eyebrow": "Esta noche",
-          "title": "Qué comer",
-          "desc": "Deja de mirar la nevera",
-          "pool": [
-            "Sushi",
-            "Tacos",
-            "Pizza",
-            "Hamburguesa smash",
-            "Ramen",
-            "Pad thai",
-            "Poke bowl",
-            "Shawarma",
-            "Empanadillas",
-            "Pasta fresca",
-            "Barbacoa coreana",
-            "Alitas buffalo"
-          ]
-        },
-        "go": {
-          "emoji": "🌍",
-          "eyebrow": "Ir a",
-          "title": "Adónde ir",
-          "desc": "Zanja el 'elige tú'",
-          "pool": [
-            "Cafetería",
-            "El parque",
-            "El cine",
-            "El centro comercial",
-            "El gimnasio",
-            "Un bar",
-            "La playa",
-            "Los bolos",
-            "Casa de un amigo",
-            "Mercado de agricultores",
-            "Un restaurante",
-            "La piscina"
-          ]
-        },
-        "do": {
-          "emoji": "🎬",
-          "eyebrow": "Hazlo",
-          "title": "Qué hacer",
-          "desc": "Salva una tarde perdida",
-          "pool": [
-            "Leer un capítulo",
-            "Jugar a algo",
-            "Salir a correr",
-            "Limpieza a fondo",
-            "Dibujar algo",
-            "Llamar a un amigo",
-            "Sesión de yoga",
-            "Cocinar algo nuevo",
-            "Escribir una página",
-            "Ver un documental",
-            "Aprender una canción",
-            "Echar una siesta"
-          ]
-        }
-      },
-      "enter": {
-        "title": "Decidir,<br>que sea fácil.",
-        "sub": "Empujones rápidos y satisfactorios que sacan la decisión de tus entrañas.",
-        "cta": "Rompe el bucle",
-        "foot": "sin menús · sin IA · totalmente offline"
-      },
-      "hub": {
-        "title": "No le demos<br>tantas vueltas.",
-        "sub": "Toca lo que te tiene bloqueado: lo decido en segundos."
-      },
-      "back": "‹ atrás",
-      "gut": {
-        "spin": "Gíralo",
-        "countdownLabel": "Quédate con ello… ¿te chirría? pulsa no",
-        "redo": "↺ No — eso no"
-      },
-      "bracket": {
-        "final": "Gana el que queda",
-        "round": "¿Cuál? · quedan {count}",
-        "vs": "vs"
-      },
-      "blind": {
-        "hint": "Toca una carta para <b>descartarla</b>: la última que quede es tu respuesta",
-        "finalHint": "Queda una — esta es tu respuesta. <b>Confírmala</b>, o si en el fondo echas de menos una de abajo, elige esa.",
-        "cardBack": "?",
-        "out": "fuera",
-        "ruledOut": "Descartada",
-        "ruledOutSwitchHint": "Descartada · toca una para cambiarte a ella",
-        "ruledOutMissHint": "Descartada · ¿echas de menos una? tócala — esa es tu respuesta",
-        "emptyYet": "aún no hay descartes",
-        "empty": "no hay descartes",
-        "lockIn": "Confírmala"
-      },
-      "weighted": {
-        "left": "quedan {count} por gastar",
-        "roll": "Que ruede",
-        "inPlay": " · {count} en juego"
-      },
-      "result": {
-        "note": "Es esa. No mires atrás: solo hazlo.",
-        "again": "Otra vez",
-        "want": "Usaría esta app"
-      },
-      "coming": {
-        "eyebrow": "Estás dentro",
-        "title": "Lo que viene<br>después",
-        "sub": "Algunas cosas más planeadas para The Decider",
-        "features": [
-          {
-            "icon": "🤝",
-            "name": "Modo Match",
-            "desc": "Decidid juntos: dos móviles, un toque."
-          },
-          {
-            "icon": "⭐",
-            "name": "Tus propias listas",
-            "desc": "Guarda tus opciones favoritas."
-          },
-          {
-            "icon": "🎞️",
-            "name": "Listas temáticas",
-            "desc": "Packs listos para usar: citas, comida reconfortante, domingos perezosos."
-          },
-          {
-            "icon": "📍",
-            "name": "Lugares cercanos",
-            "desc": "Listas que siguen tu ubicación."
-          }
-        ],
-        "ctaTitle": "¿Quieres que te avise?",
-        "ctaSub": "Deja tu correo y te aviso cuando salga. Opcional.",
-        "emailPlaceholder": "Correo (opcional)",
-        "notify": "Apúntame",
-        "doneWithEmailTitle": "Estás en la lista — gracias.",
-        "doneWithEmailSub": "Te aviso en cuanto salga.",
-        "doneNoEmailTitle": "Gracias — tu voto cuenta.",
-        "doneNoEmailSub": "Sin correo — tu interés es la señal que me ayuda a decidir qué construir después."
-      }
-    }
+    "comingSoonLabel": "Próximamente"
   },
   "notFound": {
     "code": "404",

@@ -18,6 +18,129 @@
   --color-border: var(--border);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  /* Decider's faces. These must live in the `inline` block: a plain @theme
+     emits them into :root, where the next/font variables — set on each
+     Decider page's wrapper — do not exist yet. */
+  --font-dc-display: var(--font-display), Georgia, serif;
+  --font-dc-body: var(--font-body), system-ui, sans-serif;
+}
+
+/*
+ * Decider product world (`dc-` prefix) — mirrors decider/theme/tokens.ts, so
+ * the product page and the app are one material. Fonts resolve from the
+ * next/font variables set on that page's wrapper.
+ */
+@theme {
+  --color-dc-sky-0: #221f28;
+  --color-dc-sky-1: #242235;
+  --color-dc-sky-2: #232b40;
+  --color-dc-sky-3: #25344e;
+  --color-dc-base: #1c1d24;
+  --color-dc-glass: #3a3c4a;
+  --color-dc-label: #f2efe9;
+  --color-dc-label-2: #9b9ca6;
+  --color-dc-glow: #8bb1db;
+  --color-dc-peach: #d9b8a8;
+  --color-dc-danger: #ff5a36;
+  --color-dc-success: #2fbf4b;
+  --color-dc-hairline: rgb(242 239 233 / 0.09);
+
+  /* One round of the app's own knockout, played once on load. Each card is
+     authored in its resolved state and animates backwards out of face-down,
+     so reduced-motion and no-JS both land on the finished board. */
+  @keyframes dc-flip {
+    from {
+      background: color-mix(in srgb, var(--color-dc-glass) 55%, transparent);
+      border-color: rgb(242 239 233 / 0.1);
+      transform: scale(0.965);
+    }
+  }
+  @keyframes dc-face {
+    from {
+      opacity: 0;
+    }
+  }
+  @keyframes dc-back {
+    from {
+      opacity: 1;
+    }
+    70% {
+      opacity: 0;
+    }
+  }
+}
+
+/* Decider's type roles. Three faces with a job each, used across the product
+   page and its legal pages — utilities, not a parallel stylesheet. */
+@utility dc-display {
+  font-family: var(--font-display), Georgia, serif;
+  font-weight: 400;
+  line-height: 1.08;
+  letter-spacing: -0.012em;
+  text-wrap: balance;
+}
+
+@utility dc-eyebrow {
+  font-family: var(--font-body), system-ui, sans-serif;
+  font-weight: 600;
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-dc-label-2);
+}
+
+@utility dc-lede {
+  color: var(--color-dc-label-2);
+  font-size: 1.0625rem;
+  line-height: 1.6;
+  text-wrap: pretty;
+}
+
+/* The legal pages render bare prose from their page components. */
+@utility dc-prose {
+  font-size: 0.9375rem;
+  line-height: 1.7;
+  color: var(--color-dc-label-2);
+
+  & h1 {
+    font-family: var(--font-display), Georgia, serif;
+    font-size: 2rem;
+    line-height: 1.15;
+    color: var(--color-dc-label);
+    margin-bottom: 0.5rem;
+  }
+  & h2 {
+    font-family: var(--font-display), Georgia, serif;
+    font-size: 1.25rem;
+    line-height: 1.25;
+    color: var(--color-dc-label);
+    margin: 2.75rem 0 0.75rem;
+  }
+  & p {
+    margin-bottom: 1rem;
+  }
+  & strong {
+    color: var(--color-dc-label);
+    font-weight: 600;
+  }
+  & ul {
+    margin: 0 0 1rem 1.1rem;
+    list-style: disc;
+  }
+  & li {
+    margin-bottom: 0.5rem;
+  }
+  & a {
+    color: var(--color-dc-glow);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+}
+
+/* Overscroll on the Decider pages must not flash the site's near-white ground.
+   Only the document element can carry this, so no utility can. */
+html:has(.dc-page) {
+  background: var(--color-dc-base);
 }
 
 

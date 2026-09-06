@@ -83,12 +83,12 @@
         ]
       },
       {
-        "title": "The Decider",
-        "description": "A digital circuit-breaker for thought loops. Turn hard choices into fast, tactile micro-games — no AI, no tracking. Try the interactive prototype.",
+        "title": "Decider",
+        "description": "사소한 선택을 3초 만에 대신 내려 줍니다. AI 없음, 계정 없음, 완전 오프라인.",
         "tags": [
-          "Mobile App",
-          "Decision-making",
-          "Prototype"
+          "모바일 앱",
+          "의사결정",
+          "iOS"
         ]
       }
     ]
@@ -103,157 +103,7 @@
     "copyright": "Sponom Dev. 모든 권리 보유."
   },
   "decider": {
-    "comingSoonLabel": "출시 예정",
-    "name": "The Decider",
-    "tagline": "생각의 굴레를 끊어주는 디지털 차단기. 어려운 선택을 빠르고 손맛 나는 미니 게임으로 — AI 없이, 추적 없이.",
-    "cta": "프로토타입 체험하기",
-    "metaTitle": "The Decider — 프로토타입 | sponom.dev",
-    "introLabel": "프로토타입",
-    "introTitle": "직접 해보세요.",
-    "introDescription": "지금 이 브라우저에서 바로 돌아가는 The Decider 인터랙티브 미리보기. 고민되는 걸 하나 고르면 결정 엔진이 대신 정해드립니다. 모바일 출시 예정.",
-    "backHome": "홈으로 돌아가기",
-    "prototype": {
-      "buckets": {
-        "eat": {
-          "emoji": "🍔",
-          "eyebrow": "오늘 저녁",
-          "title": "뭐 먹지",
-          "desc": "냉장고 앞 서성임 끝내기",
-          "pool": [
-            "초밥",
-            "타코",
-            "피자",
-            "스매시 버거",
-            "라멘",
-            "팟타이",
-            "포케 볼",
-            "샤와르마",
-            "만두",
-            "생면 파스타",
-            "고기 구이",
-            "버팔로 윙"
-          ]
-        },
-        "go": {
-          "emoji": "🌍",
-          "eyebrow": "어디로",
-          "title": "어디 가지",
-          "desc": "'네가 골라' 실랑이 끝내기",
-          "pool": [
-            "카페",
-            "공원",
-            "영화관",
-            "쇼핑몰",
-            "헬스장",
-            "동네 술집",
-            "바닷가",
-            "볼링장",
-            "친구 집",
-            "농산물 직판장",
-            "분식집",
-            "수영장"
-          ]
-        },
-        "do": {
-          "emoji": "🎬",
-          "eyebrow": "해보자",
-          "title": "뭐 하지",
-          "desc": "날려버릴 저녁 구하기",
-          "pool": [
-            "책 한 챕터 읽기",
-            "게임 하기",
-            "달리기 하기",
-            "대청소 하기",
-            "그림 그리기",
-            "친구에게 전화하기",
-            "요가 하기",
-            "새 요리 도전하기",
-            "일기 한 쪽 쓰기",
-            "다큐 보기",
-            "노래 배우기",
-            "낮잠 자기"
-          ]
-        }
-      },
-      "enter": {
-        "title": "결정,<br>쉽게 하기.",
-        "sub": "직감을 끌어내는 빠르고 짜릿한 한 방.",
-        "cta": "굴레 끊기",
-        "foot": "메뉴 없음 · AI 없음 · 완전 오프라인"
-      },
-      "hub": {
-        "title": "너무 깊게<br>생각하지 말자.",
-        "sub": "고민되는 걸 눌러요 — 몇 초 만에 정해드릴게요."
-      },
-      "back": "‹ 뒤로",
-      "gut": {
-        "spin": "돌리기",
-        "countdownLabel": "가만히 느껴봐요… 움찔? 그럼 아니오",
-        "redo": "↺ 아니오 — 이건 아냐"
-      },
-      "bracket": {
-        "final": "이긴 쪽이 남기",
-        "round": "어느 쪽? · {count}개 남음",
-        "vs": "vs"
-      },
-      "blind": {
-        "hint": "카드를 눌러 <b>탈락</b>시키세요 — 마지막에 남는 게 답이에요",
-        "finalHint": "하나 남았어요 — 이게 답이에요. <b>확정</b>하거나, 혹시 아래 아쉬운 게 있으면 그걸 골라요.",
-        "cardBack": "?",
-        "out": "탈락",
-        "ruledOut": "탈락됨",
-        "ruledOutSwitchHint": "탈락됨 · 눌러서 그걸로 바꾸기",
-        "ruledOutMissHint": "탈락됨 · 아쉬운 게 있어요? 누르면 그게 답이에요",
-        "emptyYet": "아직 탈락한 게 없어요",
-        "empty": "탈락한 것 없음",
-        "lockIn": "확정하기"
-      },
-      "weighted": {
-        "left": "{count}점 남음",
-        "roll": "굴려보기",
-        "inPlay": " · {count}개 진행 중"
-      },
-      "result": {
-        "note": "바로 이거예요. 뒤돌아보지 말고 — 그냥 가요.",
-        "again": "다시 하기",
-        "want": "이 앱 쓰고 싶어요"
-      },
-      "coming": {
-        "eyebrow": "함께해요",
-        "title": "다음에 나올<br>기능",
-        "sub": "The Decider에 계획된 몇 가지 더",
-        "features": [
-          {
-            "icon": "🤝",
-            "name": "매치 모드",
-            "desc": "같이 결정해요 — 두 폰, 한 번의 탭."
-          },
-          {
-            "icon": "⭐",
-            "name": "나만의 목록",
-            "desc": "즐겨 찾는 선택지를 저장하세요."
-          },
-          {
-            "icon": "🎞️",
-            "name": "테마 목록",
-            "desc": "바로 쓰는 팩 — 데이트 밤, 위로 음식, 나른한 일요일."
-          },
-          {
-            "icon": "📍",
-            "name": "주변 장소",
-            "desc": "위치를 따라오는 목록."
-          }
-        ],
-        "ctaTitle": "미리 알림 받을래요?",
-        "ctaSub": "이메일을 남기면 출시될 때 알려드릴게요. 선택 사항이에요.",
-        "emailPlaceholder": "이메일 (선택)",
-        "notify": "저도 넣어주세요",
-        "doneWithEmailTitle": "목록에 등록됐어요 — 고마워요.",
-        "doneWithEmailSub": "출시되는 순간 바로 알려드릴게요.",
-        "doneNoEmailTitle": "고마워요 — 당신의 한 표가 힘이 돼요.",
-        "doneNoEmailSub": "이메일은 필요 없어요 — 당신의 관심이 다음에 뭘 만들지 정하는 신호가 돼요."
-      }
-    }
+    "comingSoonLabel": "출시 예정"
   },
   "notFound": {
     "code": "404",

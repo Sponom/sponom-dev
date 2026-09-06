@@ -25,7 +25,7 @@ const projectLinks: ProjectLink[] = [
   },
   {
     link: '/decider',
-    logo: '/decider-logo.svg',
+    logo: '/decider-icon.png',
     internal: true,
     comingSoon: true,
   },
