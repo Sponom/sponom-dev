@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { locales } from "@/lib/i18n/config";
 
 const TITLE = "Decider — Privacy Policy";
 const DESCRIPTION = "How the Decider app handles your data. Short version: it never leaves your device.";
@@ -8,20 +7,10 @@ const DESCRIPTION = "How the Decider app handles your data. Short version: it ne
 export const metadata: Metadata = {
   title: TITLE,
   description: DESCRIPTION,
-  alternates: { canonical: "/en/decider/privacy" },
+  alternates: { canonical: "/decider/privacy" },
 };
 
-export function generateStaticParams() {
-  return locales.map((lang) => ({ lang }));
-}
-
-export default async function DeciderPrivacyPage({
-  params,
-}: {
-  params: Promise<{ lang: string }>;
-}) {
-  const { lang } = await params;
-
+export default function DeciderPrivacyPage() {
   return (
     <>
       <h1>Decider — Privacy Policy</h1>
@@ -37,7 +26,7 @@ export default async function DeciderPrivacyPage({
         For context: Decider is a game that shows you one of your own options
         at random. It does not decide anything for you, it gives no advice, and
         you remain responsible for whatever you choose to do — see the{" "}
-        <Link href={`/${lang}/decider/terms/`}>Terms of Use</Link>.
+        <Link href="/decider/terms/">Terms of Use</Link>.
       </p>
 
       <h2>What the app stores</h2>

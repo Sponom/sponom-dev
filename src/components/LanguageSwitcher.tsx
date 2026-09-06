@@ -3,7 +3,7 @@
 import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { locales, localeNames, localeFlags, type Locale } from "@/lib/i18n/config";
+import { locales, localeNames, localeFlags, localePath, type Locale } from "@/lib/i18n/config";
 
 interface LanguageSwitcherProps {
   currentLang: Locale;
@@ -14,16 +14,16 @@ export default function LanguageSwitcher({ currentLang }: LanguageSwitcherProps)
   const dropdownRef = useRef<HTMLDivElement>(null);
   const pathname = usePathname();
 
-  // Swap only the leading locale segment so the current page (e.g. /decider) is
-  // preserved when the language changes. Falls back to the locale root.
+  // Keep the current page (e.g. /decider) when the language changes: strip the
+  // locale prefix if there is one, then re-prefix for the target locale.
   function localizedHref(locale: Locale) {
-    const segments = (pathname ?? `/${currentLang}`).split("/");
-    // segments[0] is "" (leading slash); segments[1] is the current locale.
+    const segments = (pathname ?? "/").split("/");
+    // segments[0] is "" (leading slash); segments[1] may be a locale prefix.
     if (segments[1] && (locales as readonly string[]).includes(segments[1])) {
-      segments[1] = locale;
-      return segments.join("/") || `/${locale}`;
+      segments.splice(1, 1);
     }
-    return `/${locale}`;
+    const rest = segments.join("/").replace(/\/$/, "");
+    return localePath(locale, rest);
   }
 
   useEffect(() => {

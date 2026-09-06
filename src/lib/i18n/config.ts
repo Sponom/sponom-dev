@@ -24,3 +24,8 @@ export const localeFlags: Record<Locale, string> = {
   ko: "🇰🇷",
   ru: "🇷🇺",
 };
+
+/** English lives at the bare path; every other locale is prefixed. */
+export function localePath(lang: Locale, path = ""): string {
+  return lang === defaultLocale ? path || "/" : `/${lang}${path}`;
+}

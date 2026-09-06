@@ -1,22 +1,15 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { Geist, Geist_Mono } from "next/font/google";
-import { locales } from "@/lib/i18n/config";
-import { getTranslation, isLocale } from "@/lib/i18n/get-translation";
+import { defaultLocale, locales, type Locale } from "@/lib/i18n/config";
+import { isLocale } from "@/lib/i18n/get-translation";
+import SiteShell, { siteMetadata } from "@/components/SiteShell";
 import "../globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+/* English is served from the bare path (see `(en)`); only the rest get a prefix. */
+const prefixed = locales.filter((l) => l !== defaultLocale);
 
 export function generateStaticParams() {
-  return locales.map((lang) => ({ lang }));
+  return prefixed.map((lang) => ({ lang }));
 }
 
 export async function generateMetadata({
@@ -25,37 +18,7 @@ export async function generateMetadata({
   params: Promise<{ lang: string }>;
 }): Promise<Metadata> {
   const { lang } = await params;
-  const t = getTranslation(lang);
-
-  return {
-    title: t.metadata.title,
-    description: t.metadata.description,
-    keywords: t.metadata.keywords,
-    authors: [{ name: "Sponom Dev" }],
-    creator: "Sponom Dev",
-    metadataBase: new URL("https://sponom.dev"),
-    alternates: {
-      canonical: `/${lang}`,
-      languages: Object.fromEntries(locales.map((l) => [l, `/${l}`])),
-    },
-    openGraph: {
-      type: "website",
-      locale: lang,
-      url: `https://sponom.dev/${lang}`,
-      siteName: "sponom.dev",
-      title: t.metadata.title,
-      description: t.metadata.description,
-    },
-    twitter: {
-      card: "summary_large_image",
-      title: t.metadata.title,
-      description: t.metadata.description,
-    },
-    robots: {
-      index: true,
-      follow: true,
-    },
-  };
+  return siteMetadata(lang as Locale);
 }
 
 export default async function LangLayout({
@@ -67,17 +30,9 @@ export default async function LangLayout({
 }) {
   const { lang } = await params;
 
-  if (!isLocale(lang)) {
+  if (!isLocale(lang) || lang === defaultLocale) {
     notFound();
   }
 
-  return (
-    <html lang={lang}>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
-      </body>
-    </html>
-  );
+  return <SiteShell lang={lang}>{children}</SiteShell>;
 }

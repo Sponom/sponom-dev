@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { locales } from "@/lib/i18n/config";
 
 const TITLE = "Decider — Terms of Use";
 const DESCRIPTION = "The terms that apply when you use the Decider app.";
@@ -8,20 +7,10 @@ const DESCRIPTION = "The terms that apply when you use the Decider app.";
 export const metadata: Metadata = {
   title: TITLE,
   description: DESCRIPTION,
-  alternates: { canonical: "/en/decider/terms" },
+  alternates: { canonical: "/decider/terms" },
 };
 
-export function generateStaticParams() {
-  return locales.map((lang) => ({ lang }));
-}
-
-export default async function DeciderTermsPage({
-  params,
-}: {
-  params: Promise<{ lang: string }>;
-}) {
-  const { lang } = await params;
-
+export default function DeciderTermsPage() {
   return (
     <>
       <h1>Decider — Terms of Use</h1>
@@ -91,7 +80,7 @@ export default async function DeciderTermsPage({
       <p>
         Anything you type into Decider stays on your device and belongs to you.
         We do not receive it, claim it, or use it. See the{" "}
-        <Link href={`/${lang}/decider/privacy/`}>Privacy Policy</Link> for details.
+        <Link href="/decider/privacy/">Privacy Policy</Link> for details.
       </p>
 
       <h2>Price and changes</h2>

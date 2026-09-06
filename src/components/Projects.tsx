@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import type { Locale } from '@/lib/i18n/config';
+import { localePath, type Locale } from '@/lib/i18n/config';
 import type { Translation } from '@/lib/i18n/types';
 
 interface ProjectLink {
@@ -52,7 +52,7 @@ export default function Projects({ lang, translations: t }: ProjectsProps) {
         <div className="grid md:grid-cols-2 gap-6 [&>*:last-child:nth-child(odd)]:md:col-span-2 [&>*:last-child:nth-child(odd)]:md:max-w-[calc(50%-12px)] [&>*:last-child:nth-child(odd)]:md:mx-auto">
           {t.projects.items.map((project, index) => {
             const meta = projectLinks[index];
-            const href = meta.internal ? `/${lang}${meta.link}` : meta.link;
+            const href = meta.internal ? localePath(lang, meta.link) : meta.link;
             const linkClass =
               'p-2 -m-2 text-muted hover:text-foreground transition-colors';
             const icon = meta.internal ? (

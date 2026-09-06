@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import type { Locale } from "@/lib/i18n/config";
+import { localePath, type Locale } from "@/lib/i18n/config";
 import type { Translation } from "@/lib/i18n/types";
 import LanguageSwitcher from "./LanguageSwitcher";
 
@@ -24,7 +24,7 @@ export default function Header({ lang, translations: t }: HeaderProps) {
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
       <nav className="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
         <Link
-          href={`/${lang}`}
+          href={localePath(lang)}
           className="text-xl font-semibold tracking-tight hover:opacity-80 transition-opacity"
         >
           sponom<span className="text-accent">.</span>dev
