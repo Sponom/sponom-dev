@@ -58,38 +58,22 @@
       {
         "title": "Screenshot YouTube Maker",
         "description": "Chrome extension that lets you capture perfect screenshots from any YouTube video. Save moments and create thumbnails instantly.",
-        "tags": [
-          "Chrome Extension",
-          "YouTube",
-          "Screenshots"
-        ]
+        "tags": ["Chrome Extension", "YouTube", "Screenshots"]
       },
       {
         "title": "Your QR Code Generator",
         "description": "Create QR codes instantly from any URL or text. Simple, fast, and always accessible right from your browser.",
-        "tags": [
-          "Chrome Extension",
-          "QR Codes",
-          "Productivity"
-        ]
+        "tags": ["Chrome Extension", "QR Codes", "Productivity"]
       },
       {
         "title": "Recapz",
         "description": "A quiet place for your days. Capture how you feel as it happens. See your day as it really was, not as memory rewrites it.",
-        "tags": [
-          "Mobile App",
-          "Reflection",
-          "Journaling"
-        ]
+        "tags": ["Mobile App", "Reflection", "Journaling"]
       },
       {
         "title": "Decider",
         "description": "Shuffles the options you're stuck on and plays a quick round to get you moving. No account, no server, nothing leaves your phone.",
-        "tags": [
-          "Mobile App",
-          "Decision-making",
-          "iOS"
-        ]
+        "tags": ["Mobile App", "Decision-making", "iOS"]
       }
     ]
   },
@@ -101,9 +85,6 @@
   },
   "footer": {
     "copyright": "Sponom Dev. All rights reserved."
-  },
-  "decider": {
-    "comingSoonLabel": "Coming soon"
   },
   "notFound": {
     "code": "404",

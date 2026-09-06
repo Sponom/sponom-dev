@@ -1,33 +1,31 @@
-import Image from 'next/image';
-import Link from 'next/link';
-import { localePath, type Locale } from '@/lib/i18n/config';
-import type { Translation } from '@/lib/i18n/types';
+import Image from "next/image";
+import Link from "next/link";
+import { localePath, type Locale } from "@/lib/i18n/config";
+import type { Translation } from "@/lib/i18n/types";
 
 interface ProjectLink {
   link: string;
   logo: string;
   internal?: boolean;
-  comingSoon?: boolean;
 }
 
 const projectLinks: ProjectLink[] = [
   {
-    link: 'https://chromewebstore.google.com/detail/screenshot-youtube-maker/nipmbloenddjdljjalhmcbaefpmfkgad',
-    logo: '/yt-screenshot-logo.png',
+    link: "https://chromewebstore.google.com/detail/screenshot-youtube-maker/nipmbloenddjdljjalhmcbaefpmfkgad",
+    logo: "/yt-screenshot-logo.png",
   },
   {
-    link: 'https://chromewebstore.google.com/detail/your-qr-code-generator/ampkcjdaobkjgigighjomgfcmomhgpnk',
-    logo: '/qr-logo.png',
+    link: "https://chromewebstore.google.com/detail/your-qr-code-generator/ampkcjdaobkjgigighjomgfcmomhgpnk",
+    logo: "/qr-logo.png",
   },
   {
-    link: 'https://recapz.app/',
-    logo: '/recapz-logo.png',
+    link: "https://recapz.app/",
+    logo: "/recapz-logo.png",
   },
   {
-    link: '/decider',
-    logo: '/decider-icon.png',
+    link: "/decider",
+    logo: "/decider-icon.png",
     internal: true,
-    comingSoon: true,
   },
 ];
 
@@ -52,9 +50,11 @@ export default function Projects({ lang, translations: t }: ProjectsProps) {
         <div className="grid md:grid-cols-2 gap-6 [&>*:last-child:nth-child(odd)]:md:col-span-2 [&>*:last-child:nth-child(odd)]:md:max-w-[calc(50%-12px)] [&>*:last-child:nth-child(odd)]:md:mx-auto">
           {t.projects.items.map((project, index) => {
             const meta = projectLinks[index];
-            const href = meta.internal ? localePath(lang, meta.link) : meta.link;
+            const href = meta.internal
+              ? localePath(lang, meta.link)
+              : meta.link;
             const linkClass =
-              'p-2 -m-2 text-muted hover:text-foreground transition-colors';
+              "p-2 -m-2 text-muted hover:text-foreground transition-colors";
             const icon = meta.internal ? (
               <svg
                 className="w-5 h-5"
@@ -88,21 +88,21 @@ export default function Projects({ lang, translations: t }: ProjectsProps) {
             const linkProps: {
               href: string;
               className: string;
-              'aria-label': string;
+              "aria-label": string;
               target?: string;
               rel?: string;
             } = {
               href,
               className: linkClass,
-              'aria-label': `View ${project.title}`,
+              "aria-label": `View ${project.title}`,
             };
 
             if (!meta.internal) {
-              linkProps.target = '_blank';
-              linkProps.rel = 'noopener noreferrer';
+              linkProps.target = "_blank";
+              linkProps.rel = "noopener noreferrer";
             }
 
-            const LinkComponent = meta.internal ? Link : 'a';
+            const LinkComponent = meta.internal ? Link : "a";
 
             return (
               <LinkComponent {...linkProps} key={href}>
@@ -119,16 +119,9 @@ export default function Projects({ lang, translations: t }: ProjectsProps) {
                       className="rounded-xl"
                     />
                     <div className="flex-1">
-                      <div className="flex items-center gap-2 flex-wrap">
-                        <h3 className="text-xl font-semibold group-hover:text-accent transition-colors">
-                          {project.title}
-                        </h3>
-                        {meta.comingSoon && (
-                          <span className="px-2 py-0.5 bg-accent/10 text-accent text-[10px] font-semibold tracking-wide uppercase rounded-full">
-                            {t.decider.comingSoonLabel}
-                          </span>
-                        )}
-                      </div>
+                      <h3 className="text-xl font-semibold group-hover:text-accent transition-colors">
+                        {project.title}
+                      </h3>
                     </div>
                     {icon}
                   </div>

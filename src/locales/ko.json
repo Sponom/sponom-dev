@@ -2,13 +2,7 @@
   "metadata": {
     "title": "sponom.dev | 일상을 간편하게 만드는 앱",
     "description": "실제 사용자를 위해 설계된 브라우저 확장 프로그램 및 모바일 앱. Sponom Dev 제작.",
-    "keywords": [
-      "앱",
-      "브라우저 확장",
-      "모바일 앱",
-      "sponom",
-      "Sponom Dev"
-    ]
+    "keywords": ["앱", "브라우저 확장", "모바일 앱", "sponom", "Sponom Dev"]
   },
   "nav": {
     "about": "소개",
@@ -58,38 +52,22 @@
       {
         "title": "Screenshot YouTube Maker",
         "description": "모든 YouTube 동영상에서 완벽한 스크린샷을 캡처할 수 있는 Chrome 확장 프로그램. 순간을 저장하고 즉시 썸네일을 만드세요.",
-        "tags": [
-          "Chrome 확장",
-          "YouTube",
-          "스크린샷"
-        ]
+        "tags": ["Chrome 확장", "YouTube", "스크린샷"]
       },
       {
         "title": "Your QR Code Generator",
         "description": "모든 URL이나 텍스트에서 즉시 QR 코드를 생성하세요. 심플하고 빠르며, 브라우저에서 언제든 접근 가능합니다.",
-        "tags": [
-          "Chrome 확장",
-          "QR 코드",
-          "생산성"
-        ]
+        "tags": ["Chrome 확장", "QR 코드", "생산성"]
       },
       {
         "title": "Recapz",
         "description": "당신의 하루를 위한 조용한 공간. 느끼는 그 순간을 기록하세요. 기억이 다시 쓰는 것이 아닌, 진짜 하루를 보세요.",
-        "tags": [
-          "모바일 앱",
-          "성찰",
-          "일기"
-        ]
+        "tags": ["모바일 앱", "성찰", "일기"]
       },
       {
         "title": "Decider",
         "description": "망설이는 선택지를 섞어 빠르게 한 판을 돌려 움직이게 해 줍니다. 계정도 서버도 없고, 어떤 데이터도 휴대폰을 떠나지 않습니다.",
-        "tags": [
-          "모바일 앱",
-          "의사결정",
-          "iOS"
-        ]
+        "tags": ["모바일 앱", "의사결정", "iOS"]
       }
     ]
   },
@@ -101,9 +79,6 @@
   },
   "footer": {
     "copyright": "Sponom Dev. 모든 권리 보유."
-  },
-  "decider": {
-    "comingSoonLabel": "출시 예정"
   },
   "notFound": {
     "code": "404",

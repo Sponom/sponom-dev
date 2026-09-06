@@ -2,13 +2,7 @@
   "metadata": {
     "title": "sponom.dev | 简化日常生活的应用",
     "description": "为真实用户设计的浏览器扩展和移动应用。由 Sponom Dev 打造。",
-    "keywords": [
-      "应用",
-      "浏览器扩展",
-      "移动应用",
-      "sponom",
-      "Sponom Dev"
-    ]
+    "keywords": ["应用", "浏览器扩展", "移动应用", "sponom", "Sponom Dev"]
   },
   "nav": {
     "about": "关于",
@@ -58,38 +52,22 @@
       {
         "title": "Screenshot YouTube Maker",
         "description": "Chrome 扩展程序，可让您从任何 YouTube 视频中捕获完美的截图。即时保存精彩瞬间并创建缩略图。",
-        "tags": [
-          "Chrome 扩展",
-          "YouTube",
-          "截图"
-        ]
+        "tags": ["Chrome 扩展", "YouTube", "截图"]
       },
       {
         "title": "Your QR Code Generator",
         "description": "从任何 URL 或文本即时创建二维码。简单、快速，随时可从浏览器访问。",
-        "tags": [
-          "Chrome 扩展",
-          "二维码",
-          "效率"
-        ]
+        "tags": ["Chrome 扩展", "二维码", "效率"]
       },
       {
         "title": "Recapz",
         "description": "为您的每一天提供一个安静的空间。记录当下的感受。看到真实的一天，而不是记忆改写后的样子。",
-        "tags": [
-          "移动应用",
-          "反思",
-          "日记"
-        ]
+        "tags": ["移动应用", "反思", "日记"]
       },
       {
         "title": "Decider",
         "description": "把你纠结的选项打乱，快速来一局，推你一把。无需账号，没有服务器，任何数据都不会离开你的手机。",
-        "tags": [
-          "移动应用",
-          "决策",
-          "iOS"
-        ]
+        "tags": ["移动应用", "决策", "iOS"]
       }
     ]
   },
@@ -101,9 +79,6 @@
   },
   "footer": {
     "copyright": "Sponom Dev. 保留所有权利。"
-  },
-  "decider": {
-    "comingSoonLabel": "即将推出"
   },
   "notFound": {
     "code": "404",

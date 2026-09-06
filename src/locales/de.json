@@ -58,38 +58,22 @@
       {
         "title": "Screenshot YouTube Maker",
         "description": "Chrome-Erweiterung, mit der Sie perfekte Screenshots von jedem YouTube-Video aufnehmen konnen. Speichern Sie Momente und erstellen Sie sofort Miniaturansichten.",
-        "tags": [
-          "Chrome-Erweiterung",
-          "YouTube",
-          "Screenshots"
-        ]
+        "tags": ["Chrome-Erweiterung", "YouTube", "Screenshots"]
       },
       {
         "title": "Your QR Code Generator",
         "description": "Erstellen Sie sofort QR-Codes aus jeder URL oder Text. Einfach, schnell und immer direkt in Ihrem Browser zuganglich.",
-        "tags": [
-          "Chrome-Erweiterung",
-          "QR-Codes",
-          "Produktivitat"
-        ]
+        "tags": ["Chrome-Erweiterung", "QR-Codes", "Produktivitat"]
       },
       {
         "title": "Recapz",
         "description": "Ein ruhiger Ort fur Ihre Tage. Erfassen Sie, wie Sie sich fuhlen, wahrend es passiert. Sehen Sie Ihren Tag so, wie er wirklich war, nicht wie die Erinnerung ihn umschreibt.",
-        "tags": [
-          "Mobile App",
-          "Reflexion",
-          "Tagebuch"
-        ]
+        "tags": ["Mobile App", "Reflexion", "Tagebuch"]
       },
       {
         "title": "Decider",
         "description": "Mischt die Optionen, bei denen du festhängst, und spielt eine schnelle Runde, damit du in Bewegung kommst. Kein Konto, kein Server, nichts verlässt dein Telefon.",
-        "tags": [
-          "Mobile App",
-          "Entscheidungen",
-          "iOS"
-        ]
+        "tags": ["Mobile App", "Entscheidungen", "iOS"]
       }
     ]
   },
@@ -101,9 +85,6 @@
   },
   "footer": {
     "copyright": "Sponom Dev. Alle Rechte vorbehalten."
-  },
-  "decider": {
-    "comingSoonLabel": "Demnächst"
   },
   "notFound": {
     "code": "404",

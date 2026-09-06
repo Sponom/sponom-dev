@@ -58,38 +58,22 @@
       {
         "title": "Screenshot YouTube Maker",
         "description": "Extension de Chrome que te permite capturar capturas de pantalla perfectas de cualquier video de YouTube. Guarda momentos y crea miniaturas al instante.",
-        "tags": [
-          "Extension de Chrome",
-          "YouTube",
-          "Capturas"
-        ]
+        "tags": ["Extension de Chrome", "YouTube", "Capturas"]
       },
       {
         "title": "Your QR Code Generator",
         "description": "Crea codigos QR al instante desde cualquier URL o texto. Simple, rapido y siempre accesible desde tu navegador.",
-        "tags": [
-          "Extension de Chrome",
-          "Codigos QR",
-          "Productividad"
-        ]
+        "tags": ["Extension de Chrome", "Codigos QR", "Productividad"]
       },
       {
         "title": "Recapz",
         "description": "Un lugar tranquilo para tus dias. Captura como te sientes mientras sucede. Ve tu dia como realmente fue, no como la memoria lo reescribe.",
-        "tags": [
-          "App Movil",
-          "Reflexion",
-          "Diario"
-        ]
+        "tags": ["App Movil", "Reflexion", "Diario"]
       },
       {
         "title": "Decider",
         "description": "Baraja las opciones entre las que dudas y juega una ronda rápida para ponerte en marcha. Sin cuenta, sin servidor, nada sale de tu teléfono.",
-        "tags": [
-          "Aplicación móvil",
-          "Decisiones",
-          "iOS"
-        ]
+        "tags": ["Aplicación móvil", "Decisiones", "iOS"]
       }
     ]
   },
@@ -101,9 +85,6 @@
   },
   "footer": {
     "copyright": "Sponom Dev. Todos los derechos reservados."
-  },
-  "decider": {
-    "comingSoonLabel": "Próximamente"
   },
   "notFound": {
     "code": "404",

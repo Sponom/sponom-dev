@@ -96,6 +96,46 @@
   text-wrap: pretty;
 }
 
+/* The decider header: plain at the top of the page, frosted once the page
+ * has scrolled under it. The frost is a pseudo-element that fades out
+ * downwards — a gradient of tint and a mask on the blur — so there is no
+ * hard edge across the content. Driven by the scroll position (a scroll
+ * timeline over the first 48px), no JS; browsers without scroll-driven
+ * animations keep the frost on permanently, which is the safe state. */
+@utility dc-sticky-header {
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0 0 -28px 0;
+    z-index: -1;
+    pointer-events: none;
+    background: linear-gradient(
+      to bottom,
+      color-mix(in srgb, var(--color-dc-sky-0) 88%, transparent) 0%,
+      color-mix(in srgb, var(--color-dc-sky-0) 70%, transparent) 55%,
+      transparent 100%
+    );
+    backdrop-filter: blur(20px) saturate(1.4);
+    mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
+    @supports (animation-timeline: scroll()) {
+      animation: dc-header-frost linear both;
+      animation-timeline: scroll(root);
+      animation-range: 0 48px;
+    }
+  }
+  & > * {
+    position: relative;
+  }
+}
+@keyframes dc-header-frost {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 /* The legal pages render bare prose from their page components. */
 @utility dc-prose {
   font-size: 0.9375rem;

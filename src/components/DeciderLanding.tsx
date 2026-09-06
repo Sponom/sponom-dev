@@ -1,16 +1,13 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { DragRail } from "./DragRail";
 import { Literata, Onest } from "next/font/google";
 import { localePath, type Locale } from "@/lib/i18n/config";
 
-/**
- * TODO(owner): set to the App Store listing once the app is submitted.
- * `null` renders every CTA as a non-clickable "Coming soon".
- */
-const APP_STORE_URL: string | null = null;
-const CTA_LABEL = APP_STORE_URL ? "Download on the App Store" : "Coming soon to the App Store";
-const CTA_LABEL_SHORT = APP_STORE_URL ? "Get the app" : "Coming soon";
+/** The App Store listing; resolves once Apple releases 1.0. */
+const APP_STORE_URL = "https://apps.apple.com/app/id6794824582";
+const CTA_LABEL_SHORT = "Get the app";
 
 const display = Literata({
   variable: "--font-display",
@@ -28,22 +25,27 @@ const body = Onest({
 
 const TITLE = "Decider — stop deciding. Start doing.";
 const DESCRIPTION =
-  "You know what you want. You just can't face deciding it. Decider makes the call for you in about three seconds. On iPhone.";
+  "You know what you want. You just can't face deciding it. Decider turns the choice into a quick game you play out yourself. On iPhone.";
 
 /** One English page served under every locale prefix; index only the bare one. */
 export const deciderMetadata: Metadata = {
+  title: TITLE,
+  description: DESCRIPTION,
+  alternates: { canonical: "/decider" },
+  openGraph: {
+    type: "website",
     title: TITLE,
     description: DESCRIPTION,
-    alternates: { canonical: "/decider" },
-    openGraph: {
-      type: "website",
-      title: TITLE,
-      description: DESCRIPTION,
-      url: "https://sponom.dev/decider",
-      siteName: "sponom.dev",
-      images: [{ url: "/decider-og.png", width: 1024, height: 1024 }],
-    },
-    twitter: { card: "summary", title: TITLE, description: DESCRIPTION, images: ["/decider-og.png"] },
+    url: "https://sponom.dev/decider",
+    siteName: "sponom.dev",
+    images: [{ url: "/decider-og.png", width: 1024, height: 1024 }],
+  },
+  twitter: {
+    card: "summary",
+    title: TITLE,
+    description: DESCRIPTION,
+    images: ["/decider-og.png"],
+  },
 };
 
 /* Four glyphs, one stroke grammar, drawn for this world. They exist only to
@@ -56,8 +58,27 @@ const GLYPHS = {
   spark: "M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18zM15.8 8.2l-2 5.6-5.6 2 2-5.6z",
 };
 
-const SKY_STOPS =
-  "bg-linear-to-b from-dc-sky-0 via-dc-sky-2 to-dc-sky-3";
+/* Apple's own "Download on the App Store" badge (black, English), the same
+ * asset recap-card ships. Apple's guidelines: keep the badge unaltered and at
+ * least 40px tall. */
+function AppStoreBadge({ className = "" }: { className?: string }) {
+  return (
+    <a
+      href={APP_STORE_URL}
+      className={`inline-block hover:opacity-80 transition-opacity ${className}`}
+    >
+      <Image
+        src="/decider/app-store-badge.svg"
+        alt="Download on the App Store"
+        width={160}
+        height={54}
+        className="h-[54px] w-auto"
+      />
+    </a>
+  );
+}
+
+const SKY_STOPS = "bg-linear-to-b from-dc-sky-0 via-dc-sky-2 to-dc-sky-3";
 
 /* The product's one button, in both weights. */
 function Cta({
@@ -67,7 +88,7 @@ function Cta({
   className = "",
   children,
 }: {
-  href: string | null;
+  href: string;
   variant?: "solid" | "ghost";
   size?: "md" | "sm";
   className?: string;
@@ -86,20 +107,22 @@ function Cta({
       ? "gap-1.5 px-3.5 py-2 text-[0.8125rem] [&>svg]:w-[13px] [&>svg]:h-[15px]"
       : "gap-2.5 px-6 py-3.5 text-[0.9375rem]";
   const cls = `${base} ${skin} ${scale} ${className}`;
-  return href ? (
+  return (
     <a href={href} className={cls}>
       {children}
     </a>
-  ) : (
-    <span aria-disabled className={`${cls} cursor-default`}>
-      {children}
-    </span>
   );
 }
 
 function AppleMark() {
   return (
-    <svg width="17" height="20" viewBox="0 0 17 20" fill="currentColor" aria-hidden>
+    <svg
+      width="17"
+      height="20"
+      viewBox="0 0 17 20"
+      fill="currentColor"
+      aria-hidden
+    >
       <path d="M14.02 10.6c-.02-2.2 1.8-3.26 1.88-3.31-1.02-1.5-2.61-1.7-3.18-1.72-1.35-.14-2.64.79-3.33.79-.69 0-1.74-.77-2.87-.75-1.47.02-2.83.86-3.59 2.17-1.53 2.66-.39 6.6 1.1 8.76.73 1.06 1.6 2.25 2.74 2.2 1.1-.04 1.52-.71 2.85-.71 1.33 0 1.7.71 2.86.69 1.18-.02 1.93-1.08 2.65-2.14.84-1.23 1.18-2.42 1.2-2.48-.03-.01-2.3-.88-2.31-3.5zM11.85 3.86c.6-.74 1.01-1.75.9-2.76-.87.04-1.93.58-2.55 1.31-.56.65-1.05 1.69-.92 2.68.97.08 1.96-.5 2.57-1.23z" />
     </svg>
   );
@@ -181,7 +204,11 @@ const STEPS = [
 ];
 
 const RULED_OUT = [
-  { thing: "An account", stamp: "GONE.", why: "Nothing to sign up for. Open it and play." },
+  {
+    thing: "An account",
+    stamp: "GONE.",
+    why: "Nothing to sign up for. Open it and play.",
+  },
   {
     thing: "The cloud",
     stamp: "NO TAKEBACKS.",
@@ -237,7 +264,6 @@ const FAQ = [
   },
 ];
 
-
 export default function DeciderLanding({ locale }: { locale: Locale }) {
   return (
     <div
@@ -247,66 +273,93 @@ export default function DeciderLanding({ locale }: { locale: Locale }) {
         aria-hidden
         className={`fixed inset-0 z-0 overflow-hidden pointer-events-none ${SKY_STOPS} [&>svg]:absolute [&>svg]:text-[#6e7ba8] [&>svg]:opacity-6 [&>svg]:overflow-visible after:content-[''] after:absolute after:inset-0 after:bg-[radial-gradient(70ch_60ch_at_18%_-8%,color-mix(in_srgb,var(--color-dc-peach)_13%,transparent),transparent_70%),radial-gradient(60ch_50ch_at_100%_22%,color-mix(in_srgb,var(--color-dc-glow)_9%,transparent),transparent_70%)]`}
       >
-        <svg className="-top-[4vw] -left-[6vw] w-[34vw] rotate-[-18deg]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={0.6}>
+        <svg
+          className="-top-[4vw] -left-[6vw] w-[34vw] rotate-[-18deg]"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth={0.6}
+        >
           <path d={GLYPHS.eat} />
         </svg>
-        <svg className="top-[34vh] -right-[8vw] w-[40vw] rotate-[24deg]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={0.6}>
+        <svg
+          className="top-[34vh] -right-[8vw] w-[40vw] rotate-[24deg]"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth={0.6}
+        >
           <path d={GLYPHS.go} />
         </svg>
-        <svg className="bottom-[14vh] left-[4vw] w-[28vw] rotate-[11deg]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={0.6}>
+        <svg
+          className="bottom-[14vh] left-[4vw] w-[28vw] rotate-[11deg]"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth={0.6}
+        >
           <path d={GLYPHS.watch} />
         </svg>
-        <svg className="-bottom-[8vh] right-[18vw] w-[32vw] rotate-[-30deg]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={0.6}>
+        <svg
+          className="-bottom-[8vh] right-[18vw] w-[32vw] rotate-[-30deg]"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth={0.6}
+        >
           <path d={GLYPHS.spark} />
         </svg>
       </div>
 
-      <header className="relative z-1 max-w-6xl mx-auto px-6 pt-7 flex items-center justify-between gap-6">
-        <span className="flex items-center gap-3 dc-display text-[1.75rem] sm:text-[2rem] tracking-tight">
-          <Image
-            src="/decider-icon.png"
-            alt=""
-            width={40}
-            height={40}
-            className="rounded-[10px]"
-            priority
-          />
-          Decider
-        </span>
-        <nav className="flex items-center gap-5 sm:gap-7 text-[0.8125rem] text-dc-label-2">
-          <a href="#faq" className="hidden sm:inline hover:text-dc-label transition-colors">
-            FAQ
-          </a>
-          <Link
-            href={localePath(locale)}
-            className="hidden sm:inline hover:text-dc-label transition-colors"
-          >
-            Other products
-          </Link>
-          <Cta href={APP_STORE_URL} size="sm" className="hidden sm:inline-flex">
-            <AppleMark />
-            {CTA_LABEL_SHORT}
-          </Cta>
-        </nav>
-      </header>
+      {/* Sticks: on a phone this is the only CTA that stays reachable, and it
+          replaces the fixed bottom bar the page used to carry. */}
+      <div className="dc-sticky-header sticky top-0 z-20">
+        <header className="max-w-6xl mx-auto px-6 py-3 sm:py-4 flex items-center justify-between gap-6">
+          <span className="flex items-center gap-3 dc-display text-[1.5rem] sm:text-[2rem] tracking-tight">
+            <Image
+              src="/decider-icon.png"
+              alt=""
+              width={40}
+              height={40}
+              className="rounded-[10px]"
+              priority
+            />
+            Decider
+          </span>
+          <nav className="flex items-center gap-5 sm:gap-7 text-[0.8125rem] text-dc-label-2">
+            <a
+              href="#faq"
+              className="hidden sm:inline hover:text-dc-label transition-colors"
+            >
+              FAQ
+            </a>
+            <Link
+              href={localePath(locale)}
+              className="hidden sm:inline hover:text-dc-label transition-colors"
+            >
+              Other products
+            </Link>
+            <Cta href={APP_STORE_URL} size="sm">
+              <AppleMark />
+              {CTA_LABEL_SHORT}
+            </Cta>
+          </nav>
+        </header>
+      </div>
 
       <main className="relative z-1">
         {/* ── Hero ─────────────────────────────────────────────────────── */}
         <section className="max-w-6xl mx-auto px-6 pt-12 sm:pt-24 pb-16 sm:pb-24 grid lg:grid-cols-[1.05fr_0.95fr] gap-12 lg:gap-16 items-center">
           <div>
-            <p className="dc-eyebrow mb-5">For iPhone</p>
             <h1 className="dc-display text-[2.4rem] sm:text-[3.5rem] lg:text-[4rem] mb-7 max-w-[13ch]">
               You know what you want. You just can&rsquo;t face deciding it.
             </h1>
             <p className="dc-lede max-w-md mb-9">
-              So don&rsquo;t. Decider makes the call for you — one quick game,
-              about three seconds, and it&rsquo;s settled.
+              So don&rsquo;t agonise. Decider turns it into one quick game, and
+              the answer you already had comes out.
             </p>
             <div className="flex flex-wrap items-center gap-4">
-              <Cta href={APP_STORE_URL}>
-                <AppleMark />
-                {CTA_LABEL}
-              </Cta>
+              <AppStoreBadge />
               <span className="text-sm text-dc-label-2">
                 No account · No tracking · Works offline
               </span>
@@ -320,7 +373,12 @@ export default function DeciderLanding({ locale }: { locale: Locale }) {
             </figcaption>
             <div className="grid grid-cols-2 gap-2.5 sm:gap-3">
               {BOARD.map((c, i) => (
-                <Card key={c.label} delay={0.9 + i * 0.55} label={c.label} stamp={c.stamp} />
+                <Card
+                  key={c.label}
+                  delay={0.9 + i * 0.55}
+                  label={c.label}
+                  stamp={c.stamp}
+                />
               ))}
               <Card kept delay={3.9} label="Ramen" stamp="THAT’S THE CALL." />
             </div>
@@ -338,7 +396,9 @@ export default function DeciderLanding({ locale }: { locale: Locale }) {
           <ol className="grid sm:grid-cols-3 gap-8 sm:gap-10">
             {STEPS.map((s) => (
               <li key={s.n}>
-                <span className="dc-eyebrow block mb-3 text-dc-peach">{s.n}</span>
+                <span className="dc-eyebrow block mb-3 text-dc-peach">
+                  {s.n}
+                </span>
                 <h3 className="dc-display text-xl mb-2">{s.t}</h3>
                 <p className="text-[0.9375rem] leading-relaxed text-dc-label-2">
                   {s.d}
@@ -360,7 +420,7 @@ export default function DeciderLanding({ locale }: { locale: Locale }) {
             </p>
           </div>
           <div>
-            <div className="flex gap-4 sm:gap-6 overflow-x-auto overscroll-x-contain pt-2 pb-6 scrollbar-thin scrollbar-thumb-dc-glass scrollbar-track-transparent hover:scrollbar-thumb-dc-label-2">
+            <DragRail className="flex gap-4 sm:gap-6 overflow-x-auto overscroll-x-contain pt-2 pb-6 scrollbar-thin scrollbar-thumb-dc-glass scrollbar-track-transparent hover:scrollbar-thumb-dc-label-2">
               {SCREENS.map((s) => (
                 // eslint-disable-next-line @next/next/no-img-element
                 <img
@@ -373,7 +433,7 @@ export default function DeciderLanding({ locale }: { locale: Locale }) {
                   className="shrink-0 w-[min(300px,calc(100vw-6rem))] h-auto rounded-2xl"
                 />
               ))}
-            </div>
+            </DragRail>
           </div>
         </section>
 
@@ -412,7 +472,7 @@ export default function DeciderLanding({ locale }: { locale: Locale }) {
         {/* ── FAQ ──────────────────────────────────────────────────────── */}
         <section
           id="faq"
-          className="max-w-6xl mx-auto px-6 py-14 sm:py-20 border-t border-dc-hairline scroll-mt-8"
+          className="max-w-6xl mx-auto px-6 py-14 sm:py-20 border-t border-dc-hairline scroll-mt-24"
         >
           <div className="grid lg:grid-cols-[0.8fr_1.2fr] gap-10 lg:gap-16">
             <h2 className="dc-display text-3xl sm:text-4xl lg:sticky lg:top-10 lg:self-start">
@@ -435,24 +495,16 @@ export default function DeciderLanding({ locale }: { locale: Locale }) {
             </div>
           </div>
         </section>
-
       </main>
 
-      {/* The header CTA scrolls away on a phone; this one doesn't. */}
-      <div className="sm:hidden fixed bottom-0 inset-x-0 z-10 px-4 pt-3 pb-[max(0.75rem,env(safe-area-inset-bottom))] border-t border-white/10 bg-dc-sky-3/90 backdrop-blur-2xl">
-        <Cta href={APP_STORE_URL} className="w-full justify-center">
-          <AppleMark />
-          {CTA_LABEL}
-        </Cta>
-      </div>
-
-      <footer className="relative z-1 max-w-6xl mx-auto px-6 py-12 sm:py-14 pb-28 sm:pb-14 border-t border-dc-hairline text-sm text-dc-label-2">
+      <footer className="relative z-1 max-w-6xl mx-auto px-6 py-12 sm:py-14 border-t border-dc-hairline text-sm text-dc-label-2">
         <div className="grid grid-cols-2 gap-10 sm:grid-cols-[1.4fr_1fr_1fr]">
           <div className="col-span-2 sm:col-span-1">
             <p className="dc-display text-xl text-dc-label mb-3">Decider</p>
             <p className="max-w-xs leading-relaxed">
               Made so a small choice stops eating your evening.
             </p>
+            <AppStoreBadge className="mt-5" />
           </div>
           <nav className="flex flex-col gap-3">
             <span className="dc-eyebrow text-[0.625rem]">Legal</span>
@@ -486,14 +538,12 @@ export default function DeciderLanding({ locale }: { locale: Locale }) {
             >
               Other products
             </Link>
-            {APP_STORE_URL && (
-              <a
-                href={APP_STORE_URL}
-                className="hover:text-dc-label transition-colors"
-              >
-                App Store
-              </a>
-            )}
+            <a
+              href={APP_STORE_URL}
+              className="hover:text-dc-label transition-colors"
+            >
+              App Store
+            </a>
           </nav>
         </div>
         <p className="mt-12 pt-6 border-t border-white/6 text-[0.8125rem]">

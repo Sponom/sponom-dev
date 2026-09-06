@@ -45,9 +45,6 @@ export interface Translation {
   footer: {
     copyright: string;
   };
-  decider: {
-    comingSoonLabel: string;
-  };
   notFound: {
     code: string;
     title: string;
