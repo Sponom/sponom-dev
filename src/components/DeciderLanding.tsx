@@ -56,42 +56,6 @@ const GLYPHS = {
   spark: "M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18zM15.8 8.2l-2 5.6-5.6 2 2-5.6z",
 };
 
-/* Screenshot placeholders. Drop a 1179×2556 PNG into /public/decider/ and
- * pass it as `src`; nothing around the frame changes. */
-function PhoneFrame({
-  screen,
-  src,
-  alt,
-}: {
-  screen: string;
-  src?: string;
-  alt?: string;
-}) {
-  return (
-    <div className="w-full max-w-[262px] aspect-[1179/2556] p-2.5 rounded-[46px] border border-white/14 bg-dc-glass/60 backdrop-blur-2xl">
-      <div className="relative h-full rounded-[34px] overflow-hidden bg-linear-to-b from-dc-sky-1 to-dc-sky-3 before:content-[''] before:absolute before:top-2 before:left-1/2 before:-translate-x-1/2 before:w-[30%] before:h-[18px] before:rounded-full before:bg-[#0d0e13] before:z-2">
-        {src ? (
-          // eslint-disable-next-line @next/next/no-img-element
-          <img
-            src={src}
-            alt={alt ?? screen}
-            width={1179}
-            height={2556}
-            className="w-full h-full object-cover"
-          />
-        ) : (
-          <div className="absolute inset-2.5 grid place-content-center gap-2 p-4 text-center rounded-[26px] border border-dashed border-white/20">
-            <b className="dc-display text-sm font-medium">{screen}</b>
-            <span className="text-[0.6875rem] tracking-wider text-dc-label-2">
-              SCREENSHOT · 1179 × 2556
-            </span>
-          </div>
-        )}
-      </div>
-    </div>
-  );
-}
-
 const SKY_STOPS =
   "bg-linear-to-b from-dc-sky-0 via-dc-sky-2 to-dc-sky-3";
 
@@ -240,13 +204,14 @@ const RULED_OUT = [
   },
 ];
 
+/* The App Store screenshots themselves (en-US set from decider/scripts/
+ * screenshots/out, downscaled by its render.sh), same five frames, same order. */
 const SCREENS = [
-  "Screen 01",
-  "Screen 02",
-  "Screen 03",
-  "Screen 04",
-  "Screen 05",
-  "Screen 06",
+  { label: "Pick a bucket. The rest is a game.", src: "/decider/01-home.webp" },
+  { label: "Two at a time.", src: "/decider/02-faceoff.webp" },
+  { label: "Six face down.", src: "/decider/03-blindcut.webp" },
+  { label: "Everything stays on your phone.", src: "/decider/05-private.webp" },
+  { label: "Make it yours.", src: "/decider/06-yours.webp" },
 ];
 
 const FAQ = [
@@ -395,17 +360,18 @@ export default function DeciderLanding({ locale }: { locale: Locale }) {
             </p>
           </div>
           <div className="max-w-6xl mx-auto px-6">
-            <div className="flex gap-4 sm:gap-6 overflow-x-auto overscroll-x-contain pt-2 pb-6">
+            <div className="flex gap-4 sm:gap-6 overflow-x-auto overscroll-x-contain pt-2 pb-6 scrollbar-thin scrollbar-thumb-dc-glass scrollbar-track-transparent hover:scrollbar-thumb-dc-label-2">
               {SCREENS.map((s) => (
-                <figure
-                  key={s}
-                  className="shrink-0 w-[min(262px,calc(100vw-6rem))]"
-                >
-                  <PhoneFrame screen={s} />
-                  <figcaption className="mt-3.5 text-xs tracking-wider uppercase text-dc-label-2">
-                    {s}
-                  </figcaption>
-                </figure>
+                // eslint-disable-next-line @next/next/no-img-element
+                <img
+                  key={s.src}
+                  src={s.src}
+                  alt={s.label}
+                  width={642}
+                  height={1389}
+                  loading="lazy"
+                  className="shrink-0 w-[min(300px,calc(100vw-6rem))] h-auto rounded-2xl"
+                />
               ))}
             </div>
           </div>
