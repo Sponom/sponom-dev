@@ -483,35 +483,6 @@ export default async function DeciderPage({
           </div>
         </section>
 
-        {/* ── Close ────────────────────────────────────────────────────── */}
-        <section className="max-w-6xl mx-auto px-6 py-16 sm:py-24 border-t border-dc-hairline">
-          <div className="grid lg:grid-cols-[1.1fr_0.9fr] gap-14 items-center">
-            <div>
-              <h2 className="dc-display text-4xl sm:text-6xl mb-6">
-                That&rsquo;s the call.
-              </h2>
-              <p className="dc-lede max-w-sm mb-9">
-                Nothing to sign into, nothing to set up, nothing to think
-                about. Open it and get your evening back.
-              </p>
-              <div className="flex flex-wrap items-center gap-4">
-                <Cta href={APP_STORE_URL}>
-                  <AppleMark />
-                  {CTA_LABEL}
-                </Cta>
-                <Link
-                  href={`/${locale}`}
-                  className="inline-flex items-center gap-2 px-5 py-3.5 rounded-full text-sm font-medium bg-dc-glass/55 border border-white/12 backdrop-blur-2xl text-dc-label hover:border-white/25 transition-colors"
-                >
-                  ← More from sponom.dev
-                </Link>
-              </div>
-            </div>
-            <figure className="flex justify-center lg:justify-end">
-              <PhoneFrame screen="Screen four" />
-            </figure>
-          </div>
-        </section>
       </main>
 
       {/* The header CTA scrolls away on a phone; this one doesn't. */}
